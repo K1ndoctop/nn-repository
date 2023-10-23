@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    {
+      "name": "qwe",
+      "description": "cascsacsa",
+      "points": "100",
+      "group": "JS-35",
+      "id": 1
+    },
+    {
+      "name": "zxc",
+      "description": "alallala",
+      "points": "100",
+      "group": "JS-36",
+      "id": 2
+    }
+  ]
+}
