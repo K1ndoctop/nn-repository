@@ -5,6 +5,8 @@ import RegisterPage from "../pages/RegisterPage";
 import LoginPage from "../pages/LoginPage";
 import PostCreate from "../components/ribbon/PostCreate";
 import PostEdit from "../components/ribbon/PostEdit";
+import TasksPage from "../pages/TasksPage/TasksPage";
+import TasksCreatePage from "../pages/TasksPage/TasksCreatePage";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -36,12 +38,13 @@ const MainRoutes = () => {
     {
       id: 6,
       path: "/tasks",
-      element: <TasksPage/>
+      element: <TasksPage />,
     },
-      {
+    {
       id: 7,
       path: "/tasksCreate",
-      element: <TasksCreatePage/>
+      element: <TasksCreatePage />,
+    },
   ];
   return (
     <Routes>
