@@ -33,6 +33,15 @@ const MainRoutes = () => {
       path: "/edit-post",
       element: <PostEdit />,
     },
+    {
+      id: 6,
+      path: "/tasks",
+      element: <TasksPage/>
+    },
+      {
+      id: 7,
+      path: "/tasksCreate",
+      element: <TasksCreatePage/>
   ];
   return (
     <Routes>

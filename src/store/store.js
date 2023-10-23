@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import usersReducer from "./users/usersSLice";
 import postsReducer from "./posts/postsSlice";
+import tasksReducer from "./tasks/tasksSlice";
 
 export default configureStore({
   middleware: (getDefaultMiddleware) =>
@@ -10,5 +11,6 @@ export default configureStore({
   reducer: {
     users: usersReducer,
     posts: postsReducer,
+    tasks: tasksReducer,
   },
 });
