@@ -12,7 +12,7 @@ const PostsItem = ({ post }) => {
   const dispatch = useDispatch();
   const { id } = useParams();
   return (
-    <Card sx={{ maxWidth: 345, margin: 2 }}>
+    <Card sx={{ maxWidth: "100%", margin: 2 }}>
       <CardActionArea>
         <CardMedia
           component="img"

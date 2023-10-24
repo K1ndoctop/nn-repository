@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+import Register from "../components/auth/Register";
 
 const RegisterPage = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Register />
+    </div>
+  );
 };
 
 export default RegisterPage;
