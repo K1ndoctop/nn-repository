@@ -8,9 +8,9 @@ export const getTasks = createAsyncThunk(
   async (_, { getState }) => {
     const { currentPage, currentCategory, search } = getState().tasks;
     const categoryAndSearchParams = `q=${search}${
-      currentCategory && `&type=${currentCategory}`
+      currentCategory && `&group=${currentCategory}`
     }`;
-    const pagesLimitParams = `?_page=${currentPage}&_limit=12`;
+    const pagesLimitParams = `?_page=${currentPage}&_limit=8`;
     const totalPages = await getTotalPages(
       `${TASKS_API}?${categoryAndSearchParams}`
     );
@@ -46,7 +46,7 @@ export const editTask = createAsyncThunk(
   }
 );
 
-export const deleteProduct = createAsyncThunk(
+export const deleteTask = createAsyncThunk(
   "tasks/deleteTask",
   async ({ id }, { dispatch }) => {
     await axios.delete(`${TASKS_API}/${id}`);
@@ -54,7 +54,7 @@ export const deleteProduct = createAsyncThunk(
   }
 );
 
-export const getCatygories = createAsyncThunk(
+export const getCategories = createAsyncThunk(
   "tasks/getCategories",
   async () => {
     const { data } = await axios.get(TASKS_API);
