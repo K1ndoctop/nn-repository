@@ -16,12 +16,12 @@ const PostCreate = () => {
     <>
       <div className={`w-full h-screen absolute ${styles.bg}`}></div>
       <div className="md:pl-32 w-full h-screen relative flex justify-center items-center overflow-hidden">
-        <div className="">
+        <div className="lg:w-1/2">
           <h3 className="pt-2 pb-4 text-2xl text-center font-semibold">
             Добавить пост
           </h3>
           <div className="sm:flex">
-            <div className="w-32 h-32 mx-6">
+            <div className="w-32 h-32 mx-6 lg:w-1/2 lg:h-1/2">
               {addPost.image ? (
                 <img
                   className="rounded-lg mx-4"
@@ -40,7 +40,7 @@ const PostCreate = () => {
                 />
               )}
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col lg:w-full">
               <input
                 className="m-2 p-2 border rounded-lg"
                 type="text"
@@ -48,7 +48,7 @@ const PostCreate = () => {
                 onChange={(e) => setAddPost({ title: e.target.value })}
               />
               <textarea
-                className="m-2 p-2 border rounded-lg"
+                className="m-2 p-2 border rounded-lg lg:h-32"
                 type="text"
                 placeholder="Описание"
                 onChange={(e) => setAddPost({ description: e.target.value })}

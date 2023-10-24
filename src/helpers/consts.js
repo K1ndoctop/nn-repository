@@ -1,6 +1,6 @@
 export const POSTS_API = "http://34.173.115.25/api/v1";
 
-export const TASKS_API = "http://localhost:1999/tasks";
+export const TASKS_API = "http://localhost:8000/tasks";
 
 export const PROFILE_API = "http://34.173.115.25/api/v1/account/profile/";
 
