@@ -9,6 +9,7 @@ import Register from "../components/auth/Register";
 import Login from "../components/auth/Login";
 import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
 import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
 
 const MainRoutes = () => {
@@ -57,6 +58,11 @@ const MainRoutes = () => {
       id: 11,
       path: "/tasks-edit/:id",
       element: <TasksEdit />,
+    },
+    {
+      id: 12,
+      path: "/profile",
+      element: <ProfilePage />,
     },
   ];
   return (
