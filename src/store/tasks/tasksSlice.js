@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getTasks, getOneTask, getCatygories } from "./tasksActions";
+import { getTasks, getOneTask, getCategories } from "./tasksActions";
 
 const tasksSlice = createSlice({
   name: "tasks",
@@ -56,7 +56,7 @@ const tasksSlice = createSlice({
       .addCase(getOneTask.rejected, (state) => {
         state.loading = false;
       })
-      .addCase(getCatygories.fulfilled, (state, action) => {
+      .addCase(getCategories.fulfilled, (state, action) => {
         state.categories = action.payload;
       });
   },

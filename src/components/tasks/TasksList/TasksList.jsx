@@ -16,11 +16,19 @@ const TasksList = () => {
       {loading ? (
         <h3>Loading...</h3>
       ) : (
-        <>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "20px",
+            width: "90%",
+            margin: "0 auto",
+          }}
+        >
           {tasks.map((task) => (
             <TasksItem key={task.id} task={task} />
           ))}
-        </>
+        </div>
       )}
     </div>
   );

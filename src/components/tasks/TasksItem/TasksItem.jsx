@@ -1,17 +1,30 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const TasksItem = ({ task }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
-    <div onClick={() => navigate(`/tasks/${task.id}`)}>
+    <div
+      style={{ border: "1px solid black", borderRadius: "5px", width: "20%" }}
+    >
       <div className="">
-        <h4>{task.name}</h4>
-        <p>{task.points}</p>
-        <span>{task.group}</span>
+        <h4>Task name: {task.name}</h4>
+        <p>Points: {task.points}</p>
+        <span>Group: {task.group}</span>
       </div>
       <div className="">
-        <p>{task.description}</p>
+        <p>Description: {task.description}</p>
+      </div>
+      <div style={{ display: "flex", gap: "10px" }}>
+        <button
+          style={{ color: "green" }}
+          onClick={() => navigate(`/tasks/${task.id}`)}
+        >
+          Details
+        </button>
+        <button style={{ color: "red" }}>Delete</button>
       </div>
     </div>
   );
