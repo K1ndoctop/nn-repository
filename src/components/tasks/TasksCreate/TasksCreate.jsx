@@ -52,7 +52,7 @@ const TasksCreate = () => {
       <button
         onClick={() => {
           dispatch(createTask({ task }));
-          navigate("./tasks");
+          navigate("/tasks");
         }}
       >
         Create
