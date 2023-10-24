@@ -24,7 +24,7 @@ const TasksItem = ({ task }) => {
           style={{ color: "green" }}
           onClick={() => navigate(`/tasks/${task.id}`)}
         >
-          Details
+          Details...
         </button>
         <button
           onClick={() => dispatch(deleteTask({ id: task.id }))}
