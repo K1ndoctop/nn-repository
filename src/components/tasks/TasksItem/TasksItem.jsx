@@ -1,9 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { deleteTask } from "../../../store/tasks/tasksActions";
 
 const TasksItem = ({ task }) => {
   const navigate = useNavigate();
+
   const dispatch = useDispatch();
   return (
     <div
@@ -24,7 +26,12 @@ const TasksItem = ({ task }) => {
         >
           Details
         </button>
-        <button style={{ color: "red" }}>Delete</button>
+        <button
+          onClick={() => dispatch(deleteTask({ id: task.id }))}
+          style={{ color: "red" }}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

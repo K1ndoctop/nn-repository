@@ -1,13 +1,6 @@
 {
   "tasks": [
     {
-      "name": "qwe",
-      "description": "cascsacsa",
-      "points": "100",
-      "group": "JS-35",
-      "id": 1
-    },
-    {
       "name": "zxc",
       "description": "alallala",
       "points": "100",
@@ -18,15 +11,8 @@
       "name": "lalalal",
       "description": "sfafkbqwkjfbjkqwbfkj",
       "points": "100",
-      "group": "JS-35",
+      "group": "JS-37",
       "id": 3
-    },
-    {
-      "name": "Pamparam",
-      "description": "hjsavcbjlsabchjascbhsa",
-      "points": "5",
-      "group": "JS-35",
-      "id": 4
     },
     {
       "name": "malik",
@@ -36,11 +22,39 @@
       "id": 5
     },
     {
-      "name": "suli",
-      "description": "asmfnkal",
-      "points": "8",
+      "name": "test",
+      "description": "test",
+      "points": "12",
       "group": "JS-36",
-      "id": 6
+      "id": 7
+    },
+    {
+      "name": "fasyfuay",
+      "description": "cskjsa",
+      "points": "5",
+      "group": "JS-35",
+      "id": 8
+    },
+    {
+      "name": "kotak",
+      "description": "vasbj",
+      "points": "12",
+      "group": "JS-36",
+      "id": 9
+    },
+    {
+      "name": "wqfqw",
+      "description": "fqwqwf",
+      "points": "124",
+      "group": "JS-37",
+      "id": 10
+    },
+    {
+      "name": "svz",
+      "description": "zxvv",
+      "points": "315",
+      "group": "JS-36",
+      "id": 11
     }
   ]
 }
