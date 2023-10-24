@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import SideBar from "../components/SideBar/SideBar";
+import React from "react";
 import PostsList from "../components/ribbon/PostsList";
 
 const HomePage = () => {

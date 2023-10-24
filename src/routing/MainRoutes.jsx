@@ -6,9 +6,10 @@ import LoginPage from "../pages/LoginPage";
 import PostEdit from "../components/ribbon/PostEdit";
 import TasksPage from "../pages/TasksPage/TasksPage";
 import TasksCreatePage from "../pages/TasksPage/TasksCreatePage";
-import Login from "../components/auth/Login";
-import Register from "../components/auth/Register";
 import PostCreatePage from "../pages/PostCreatePage";
+import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
+import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
+import ProfilePage from "../pages/ProfilePage/ProfilePage";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -19,11 +20,6 @@ const MainRoutes = () => {
     },
     {
       id: 2,
-      path: "/register",
-      element: <RegisterPage />,
-    },
-    {
-      id: 3,
       path: "/login",
       element: <LoginPage />,
     },
@@ -49,13 +45,23 @@ const MainRoutes = () => {
     },
     {
       id: 8,
-      path: "/login",
-      element: <Login />,
+      path: "/register",
+      element: <RegisterPage />,
     },
     {
-      id: 9,
-      path: "/register",
-      element: <Register />,
+      id: 10,
+      path: "/tasks/:id",
+      element: <TasksDetails />,
+    },
+    {
+      id: 11,
+      path: "/tasks-edit/:id",
+      element: <TasksEdit />,
+    },
+    {
+      id: 12,
+      path: "/profile",
+      element: <ProfilePage />,
     },
   ];
   return (

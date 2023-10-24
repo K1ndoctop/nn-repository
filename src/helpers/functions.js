@@ -31,6 +31,6 @@ export const logout = () => {
 
 export const checkLogin = () => {
   const data = localStorage.getItem("token");
-  if (data) return false;
-  return true;
+  if (data) return true;
+  return false;
 };
