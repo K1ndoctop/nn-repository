@@ -9,6 +9,8 @@ import TasksPage from "../pages/TasksPage/TasksPage";
 import TasksCreatePage from "../pages/TasksPage/TasksCreatePage";
 import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
+import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
+import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -56,6 +58,16 @@ const MainRoutes = () => {
       id: 9,
       path: "/register",
       element: <Register />,
+    },
+    {
+      id: 10,
+      path: "/tasks/:id",
+      element: <TasksDetails />,
+    },
+    {
+      id: 11,
+      path: "/tasks-edit/:id",
+      element: <TasksEdit />,
     },
   ];
   return (
