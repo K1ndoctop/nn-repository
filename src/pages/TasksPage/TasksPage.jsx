@@ -23,7 +23,7 @@ const TasksPage = () => {
           id="create--task"
           style={{
             border: "1px solid black",
-            borderRadius: "50%",
+            borderRadius: "100%",
             padding: "0px 5px",
             backgroundColor: "green",
             color: "white",

@@ -1,6 +1,14 @@
 {
   "users": [
-    
+    {
+      "is_admin": false,
+      "first_name": "Qwezxc123",
+      "last_name": "Qwezxc123",
+      "email": "relestatez@gmail.com",
+      "password": "Qwezxc123",
+      "password_confirm": "Qwezxc123",
+      "id": 1
+    }
   ],
   "tasks": [
     {
