@@ -13,18 +13,18 @@ const Login = () => {
       dispatch(LoginUser({ email: email, password: password }));
       setEmail("");
       setPassword("");
-    }else{
-      alert('empty')
+    } else {
+      alert("empty");
     }
   };
 
   return (
-   <div>
-    <h1>Login</h1>
-    <input type="text" />
-    <input type="text" />
-    <button></button>
-   </div>
+    <div>
+      <h1>Login</h1>
+      <input type="text" />
+      <input type="text" />
+      <button></button>
+    </div>
   );
 };
 

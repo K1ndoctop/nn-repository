@@ -1,7 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import PostsList from "../components/ribbon/PostsList";
 
 const HomePage = () => {
-  return <div></div>;
+
+  return (
+    <div>
+      <PostsList />
+    </div>
+  );
 };
 
 export default HomePage;
