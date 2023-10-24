@@ -7,15 +7,23 @@ import { Link, useNavigate } from "react-router-dom";
 const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [first_name, setFirst_name] = useState('')
-  const [last_name, setLast_name] = useState('')
+  const [first_name, setFirst_name] = useState("");
+  const [last_name, setLast_name] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
-  const [checkBox, setCheckBox] = useState(false)
+  const [checkBox, setCheckBox] = useState(false);
 
   const postUser = () => {
-    if (email.trim() && password.trim() && passwordConfirm.trim() && password === passwordConfirm && checkBox && first_name && last_name){
+    if (
+      email.trim() &&
+      password.trim() &&
+      passwordConfirm.trim() &&
+      password === passwordConfirm &&
+      checkBox &&
+      first_name &&
+      last_name
+    ) {
       dispatch(
         registerUser({
           is_admin: false,
@@ -26,23 +34,23 @@ const Register = () => {
           password_confirm: passwordConfirm,
         })
       );
-      setFirst_name('')
-      setLast_name('')
+      setFirst_name("");
+      setLast_name("");
       setPasswordConfirm("");
       setEmail("");
       setPassword("");
       navigate("/login");
-    }else{
-      alert('empty')
+    } else {
+      alert("empty");
     }
   };
 
   useEffect(() => {
-    console.log(checkBox, 'cehckbox')
-  },[checkBox])
+    console.log(checkBox, "cehckbox");
+  }, [checkBox]);
 
   return (
-    <section className="bg-white">
+    <section className="bg-white ml-32">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
         <aside className="relative block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
           <img
@@ -74,44 +82,44 @@ const Register = () => {
             </h1>
 
             <p className="mt-4 leading-relaxed text-gray-500">
-              enter your email and password, password needed more than 6 letters 
+              enter your email and password, password needed more than 6 letters
             </p>
 
             <form action="#" className="mt-8 grid grid-cols-6 gap-6">
-            <div className="col-span-6 sm:col-span-3">
-            <label
-              htmlFor="FirstName"
-              className="block text-sm font-medium text-gray-700"
-            >
-              First Name
-            </label>
+              <div className="col-span-6 sm:col-span-3">
+                <label
+                  htmlFor="FirstName"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  First Name
+                </label>
 
-            <input
-              onChange={(e) => setFirst_name(e.target.value)}
-            value={first_name}
-              type="text"
-              id="FirstName"
-              name="first_name"
-              className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
-          <div className="col-span-6 sm:col-span-3">
-            <label
-              htmlFor="LastName"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Last Name
-            </label>
+                <input
+                  onChange={(e) => setFirst_name(e.target.value)}
+                  value={first_name}
+                  type="text"
+                  id="FirstName"
+                  name="first_name"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                />
+              </div>
+              <div className="col-span-6 sm:col-span-3">
+                <label
+                  htmlFor="LastName"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Last Name
+                </label>
 
-            <input 
-              onChange={(e) => setLast_name(e.target.value)}
-              value={last_name}
-              type="text"
-              id="LastName"
-              name="last_name"
-              className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-            />
-          </div>
+                <input
+                  onChange={(e) => setLast_name(e.target.value)}
+                  value={last_name}
+                  type="text"
+                  id="LastName"
+                  name="last_name"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                />
+              </div>
               <div className="col-span-6">
                 <label
                   htmlFor="Email"
@@ -198,8 +206,10 @@ const Register = () => {
               </div>
 
               <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                onClick={postUser}>
+                <button
+                  className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                  onClick={postUser}
+                >
                   Create an account
                 </button>
 
