@@ -1,14 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import RegisterPage from "../pages/RegisterPage";
-import LoginPage from "../pages/LoginPage";
+import HomePage from '.././pages/HomePage'
 import PostCreate from "../components/ribbon/PostCreate";
 import PostEdit from "../components/ribbon/PostEdit";
 import TasksPage from "../pages/TasksPage/TasksPage";
 import TasksCreatePage from "../pages/TasksPage/TasksCreatePage";
-import Login from "../components/auth/Login";
 import Register from "../components/auth/Register";
+import Login from "../components/auth/Login";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -18,14 +16,9 @@ const MainRoutes = () => {
       element: <HomePage />,
     },
     {
-      id: 2,
-      path: "/register",
-      element: <RegisterPage />,
-    },
-    {
-      id: 3,
-      path: "/login",
-      element: <LoginPage />,
+      id:2,
+      path: '/login',
+      element: <Login/>
     },
     {
       id: 4,
@@ -49,11 +42,6 @@ const MainRoutes = () => {
     },
     {
       id: 8,
-      path: "/login",
-      element: <Login />,
-    },
-    {
-      id: 9,
       path: "/register",
       element: <Register />,
     },

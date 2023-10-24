@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getUsers, registerUser } from "./usersActions";
+import { getUser } from "./usersActions";
 
 const usersSlice = createSlice({
   name: "users",
@@ -10,12 +10,16 @@ const usersSlice = createSlice({
     oneUser: "",
   },
   reducers: {},
-  // extraReducers: (builder) => {
-  //     builder
-  //         .addCase(registerUser.fulfilled, (state) => {
-
-  //         })
-  // }
+  extraReducers: (builder) => {
+    builder
+        .addCase(getUser.pending, (state, action ) => {
+            state.loading = true
+        })
+        .addCase(getUser.fulfilled, (state, action) => {
+            state.oneUser = action.payload
+            state.loading = false
+        })
+}
 });
 
 export default usersSlice.reducer;
