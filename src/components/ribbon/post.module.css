@@ -1,0 +1,6 @@
+.bg {
+  background: url("https://tecdn.b-cdn.net/img/Photos/Others/img%20(53).webp")
+    no-repeat;
+  background-size: cover;
+  filter: brightness(0.5);
+}

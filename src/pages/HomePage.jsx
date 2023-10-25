@@ -1,19 +1,13 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { checkToken, getUser } from '../store/users/usersActions';
+import React from "react";
+import PostsList from "../components/ribbon/PostsList";
 
 const HomePage = () => {
-    const dispatch = useDispatch()
 
-    useEffect(() => {
-        dispatch(checkToken())
-    },[])
-
-    return (
-        <div>
-        
-        </div>
-    );
+  return (
+    <div>
+      <PostsList />
+    </div>
+  );
 };
 
 export default HomePage;
