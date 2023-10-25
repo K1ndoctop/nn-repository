@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { LoginUser } from "../../store/users/usersActions";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,6 +14,7 @@ const Login = () => {
       dispatch(LoginUser({ email: email, password: password }));
       setEmail("");
       setPassword("");
+      navigate('/')
     } else {
       alert("empty");
     }
