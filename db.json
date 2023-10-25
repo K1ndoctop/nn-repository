@@ -1,12 +1,17 @@
 {
   "users": [
     {
-      "is_admin": false,
-      "first_name": "Sulaiman10",
-      "last_name": "Sagynaliev10",
-      "email": "sulaimanmind8621234@gmail.com",
-      "password": "12345678",
-      "password_confirm": "12345678",
+      "is_admin": true,
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "email": "sulaimanmind862@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": [],
+      "tasks": [],
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
       "id": 1
     }
   ],
