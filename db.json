@@ -1,12 +1,17 @@
 {
   "users": [
     {
-      "is_admin": false,
-      "first_name": "Qwezxc123",
-      "last_name": "Qwezxc123",
-      "email": "relestatez@gmail.com",
-      "password": "Qwezxc123",
-      "password_confirm": "Qwezxc123",
+      "is_admin": true,
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "email": "sulaimanmind862@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": [],
+      "tasks": [],
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
       "id": 1
     }
   ],
