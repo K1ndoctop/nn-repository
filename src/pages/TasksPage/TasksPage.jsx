@@ -9,27 +9,27 @@ const TasksPage = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className=""></div>
-      <div className="">
-        <TasksFilter />
-        <TasksSearch />
-        <TasksPagination />
-        <TasksList />
+      <div style={{ width: "90%", margin: "0 auto", position: "relative" }}>
+        <div style={{ display: "flex", gap: "20px" }}>
+          <TasksFilter />
+          <TasksSearch />
+          <TasksPagination />
+        </div>
+        <div className="">
+          <TasksList />
+        </div>
+        <div
+          className="w-12 h-12 bg-green-700 rounded-full border-black border flex justify-center items-center absolute bottom-8 right-8"
+          onClick={() => navigate("/tasksCreate")}
+        >
+          <button
+            className="text-white text-3xl font-semibold -mt-2 "
+            id="create--task"
+          >
+            +
+          </button>
+        </div>
       </div>
-      <button
-        onClick={() => navigate("/tasksCreate")}
-        id="create--task"
-        style={{
-          border: "1px solid black",
-          borderRadius: "50%",
-          padding: "0px 5px",
-          backgroundColor: "green",
-          color: "white",
-          fontSize: "24px",
-        }}
-      >
-        +
-      </button>
     </div>
   );
 };
