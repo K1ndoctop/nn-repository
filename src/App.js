@@ -7,7 +7,7 @@ import Burger from "./components/ui/Burger/Burger";
 
 const App = () => {
   return (
-    <div className="flex">
+    <div>
       <Burger />
 
       <MainRoutes />
