@@ -8,6 +8,15 @@ export const getPosts = createAsyncThunk("posts/getPosts", async () => {
   return data.results;
 });
 
+export const getOnePost = createAsyncThunk(
+  "products/getOnePost",
+  async (id) => {
+    const { data } = await axios.get(`${POSTS_API}/products/${id}/`);
+    console.log(data);
+    return data;
+  }
+);
+
 export const setPosts = createAsyncThunk(
   "posts/setPosts",
   async ({ post }, { dispatch }) => {
@@ -16,7 +25,7 @@ export const setPosts = createAsyncThunk(
   }
 );
 
-export const editPosts = createAsyncThunk(
+export const editPost = createAsyncThunk(
   "posts/editPosts",
   async ({ post }, { dispatch }) => {
     await axios.patch(`${POSTS_API}/products/${post.id}/`, post);

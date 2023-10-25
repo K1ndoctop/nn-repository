@@ -30,7 +30,7 @@ const MainRoutes = () => {
     },
     {
       id: 5,
-      path: "/edit-post",
+      path: "/edit-post/:id",
       element: <PostEdit />,
     },
     {

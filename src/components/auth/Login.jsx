@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { LoginUser } from "../../store/users/usersActions";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
