@@ -74,11 +74,12 @@ const Register = () => {
             </a>
 
             <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-              Registration allow
+              Регистрация
             </h1>
 
             <p className="mt-4 leading-relaxed text-gray-500">
-              enter your email and password, password needed more than 6 letters
+              введите свой емайл и пароль, пароли должны быть не меньше 6
+              символов
             </p>
 
             <form action="#" className="mt-8 grid grid-cols-6 gap-6">
@@ -87,7 +88,7 @@ const Register = () => {
                   htmlFor="FirstName"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  First Name
+                  Имя
                 </label>
 
                 <input
@@ -96,7 +97,7 @@ const Register = () => {
                   type="text"
                   id="FirstName"
                   name="first_name"
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full h-8 shadow-inner rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
               <div className="col-span-6 sm:col-span-3">
@@ -104,7 +105,7 @@ const Register = () => {
                   htmlFor="LastName"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Last Name
+                  Фамилия
                 </label>
 
                 <input
@@ -113,7 +114,7 @@ const Register = () => {
                   type="text"
                   id="LastName"
                   name="last_name"
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full h-8 shadow-inner rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
               <div className="col-span-6">
@@ -130,7 +131,7 @@ const Register = () => {
                   type="text"
                   id="Email"
                   name="email"
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full h-8 shadow-inner rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
 
@@ -139,7 +140,7 @@ const Register = () => {
                   htmlFor="text"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Password
+                  Пароль
                 </label>
 
                 <input
@@ -148,7 +149,7 @@ const Register = () => {
                   type="text"
                   id="Password"
                   name="password"
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full h-8 shadow-inner rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
 
@@ -157,7 +158,7 @@ const Register = () => {
                   htmlFor="PasswordConfirmation"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Password Confirmation
+                  Повторный пароль
                 </label>
 
                 <input
@@ -166,7 +167,7 @@ const Register = () => {
                   type="text"
                   id="PasswordConfirmation"
                   name="password_confirmation"
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full h-8 shadow-inner rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                 />
               </div>
 
@@ -181,21 +182,21 @@ const Register = () => {
                   />
 
                   <span className="text-sm text-gray-700">
-                    I want to receive emails about events, product updates and
-                    company announcements.
+                    Я хочу получать электронные письма о событиях, обновлениях
+                    продуктов и объявлениях компании.
                   </span>
                 </label>
               </div>
 
               <div className="col-span-6">
                 <p className="text-sm text-gray-500">
-                  By creating an account, you agree to our
+                Создавая учетную запись, вы соглашаетесь с нашими
                   <a href="#" className="text-gray-700 underline">
-                    terms and conditions
+                  условия и положения
                   </a>
-                  and
+                  и 
                   <a href="#" className="text-gray-700 underline">
-                    privacy policy
+                  политика конфиденциальности
                   </a>
                   .
                 </p>
@@ -206,13 +207,13 @@ const Register = () => {
                   className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
                   onClick={postUser}
                 >
-                  Create an account
+                  Создать аккаунт
                 </button>
 
                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-                  Already have an account?
+                  Уже есть аккаунт?
                   <a href="#" className="text-gray-700 underline">
-                    <Link to="/login">login</Link>
+                    <Link to="/login">Войти</Link>
                   </a>
                   .
                 </p>
