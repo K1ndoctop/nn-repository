@@ -93,7 +93,7 @@ const PostCreate = () => {
                 className="m-2 p-2 border rounded-lg bg-blue-400 hover:bg-blue-500"
                 onClick={() => {
                   dispatch(setPosts({ addPost }));
-                  // navigate("/");
+                  navigate("/home");
                 }}
               >
                 Save
