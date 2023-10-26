@@ -50,10 +50,6 @@ const Register = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(checkBox, "cehckbox");
-  }, [checkBox]);
-
   return (
     <section className="bg-white ml-32">
       <div className="lg:grid lg:min-h-screen lg:grid-cols-12">

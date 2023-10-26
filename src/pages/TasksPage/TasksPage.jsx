@@ -4,11 +4,13 @@ import { useNavigate } from "react-router-dom";
 import TasksPagination from "../../components/tasks/TasksPagination/TasksPagination";
 import TasksSearch from "../../components/tasks/TasksSearch/TasksSearch";
 import TasksFilter from "../../components/tasks/TasksFilter/TasksFilter";
+import Burger from "../../components/ui/Burger/Burger";
 
 const TasksPage = () => {
   const navigate = useNavigate();
   return (
     <div>
+      <Burger />
       <div style={{ width: "90%", margin: "0 auto", position: "relative" }}>
         <div style={{ display: "flex", gap: "20px" }}>
           <TasksFilter />

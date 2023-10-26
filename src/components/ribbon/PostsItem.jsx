@@ -5,11 +5,12 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { deletePosts, editPosts } from "../../store/posts/postsAction";
-import { useParams } from "react-router-dom";
+import { deletePosts, getOnePost } from "../../store/posts/postsAction";
+import { useNavigate, useParams } from "react-router-dom";
 
 const PostsItem = ({ post }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { id } = useParams();
   return (
     <Card sx={{ maxWidth: "100%", margin: 2 }}>
@@ -28,7 +29,13 @@ const PostsItem = ({ post }) => {
             {post.description}
           </Typography>
         </CardContent>
-        <Button>Edit</Button>
+        <Button
+          onClick={() => {
+            navigate(`/edit-post/${post.id}`);
+          }}
+        >
+          Edit
+        </Button>
         <Button onClick={() => dispatch(deletePosts({ id: post.id }))}>
           Delete
         </Button>
