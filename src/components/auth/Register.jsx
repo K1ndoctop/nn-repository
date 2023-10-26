@@ -32,6 +32,11 @@ const Register = () => {
           email: email,
           password: password,
           password_confirm: passwordConfirm,
+          groups: [],
+          tasks: [],
+          points: 0,
+          coins: 0,
+          payedMonths: 0,
         })
       );
       setFirst_name("");

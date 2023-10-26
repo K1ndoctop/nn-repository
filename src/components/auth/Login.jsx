@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,6 +15,7 @@ const Login = () => {
       setEmail("");
       setPassword("");
       navigate("/home");
+
     } else {
       alert("empty");
     }

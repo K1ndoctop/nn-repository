@@ -8,9 +8,11 @@ const TasksCreate = () => {
 
   const [task, setTask] = useState({
     name: "",
-    description: "",
-    points: 0,
     group: "",
+    points: 0,
+    description: "",
+    isDone: false,
+    isChecked: false,
   });
 
   const navigate = useNavigate();
@@ -37,7 +39,7 @@ const TasksCreate = () => {
 
       <input
         placeholder="Points"
-        type="number"
+        type="text"
         onChange={(e) => setTask({ ...task, points: e.target.value })}
       />
 
