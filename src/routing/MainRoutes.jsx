@@ -10,6 +10,7 @@ import PostCreatePage from "../pages/PostCreatePage";
 import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
 import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
+import Basket from "../components/basket/Basket";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -63,6 +64,11 @@ const MainRoutes = () => {
       path: "/profile",
       element: <ProfilePage />,
     },
+    {
+      id: 12,
+      path: "/basket",
+      element: <Basket />,
+    }
   ];
   return (
     <Routes>

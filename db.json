@@ -21,7 +21,7 @@
       "group": "JS-34",
       "points": "100",
       "description": "asnkoslfanfjnlcak",
-      "isDone": false,
+      "isDone": true,
       "isChecked": false,
       "id": 1
     },
@@ -39,7 +39,7 @@
       "group": "JS-36",
       "points": "100",
       "description": "bjzkvjasbv",
-      "isDone": false,
+      "isDone": true,
       "isChecked": false,
       "id": 3
     },
@@ -78,15 +78,6 @@
       "isDone": false,
       "isChecked": false,
       "id": 7
-    },
-    {
-      "name": "eighthTest",
-      "group": "JS-34",
-      "points": "100",
-      "description": "acsjbxnzkqp",
-      "isDone": true,
-      "isChecked": false,
-      "id": 8
     },
     {
       "name": "ninthTest",
