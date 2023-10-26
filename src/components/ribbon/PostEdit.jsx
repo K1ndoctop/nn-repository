@@ -112,7 +112,7 @@ const PostEdit = () => {
                         onClick={() => {
                           dispatch(editPostFunc({ postEdit: editPost }));
                           dispatch(clearOnePost());
-                          navigate("/");
+                          navigate("/home");
                         }}
                       >
                         Save
