@@ -13,6 +13,6 @@ export const CHECK_TOKEN_API =
   "http://34.173.115.25/api/v1/account/check-token/";
 
 export const TOKEN_FERFESH =
-  "http://34.173.115.25/api/v1/account/token-refresh/";
+  "http://34.173.115.25/api/v1/account/token/refresh/";
 
 export const DELETE_USER = "http://34.173.115.25/api/v1/account/delete-user/";

@@ -3,12 +3,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { getPosts } from "../../store/posts/postsAction";
 import PostsItem from "./PostsItem";
 import { Button, Input } from "@mui/material";
+import { Stack } from "@mui/material";
+import { Pagination } from "@mui/material";
+import { changePostPage } from "../../store/posts/postsSlice";
 
 const PostsList = () => {
   const dispatch = useDispatch();
-  const { posts } = useSelector((state) => state.posts);
+  const { posts, currentPage, totalPages } = useSelector(
+    (state) => state.posts
+  );
   //   const [search, setSearch] = useState([]);
   //   const [searchValue, setSearchValue] = useState("");
+
+  const handleChange = (event, value) => {
+    dispatch(changePostPage({ page: value }));
+    dispatch(getPosts());
+  };
 
   useEffect(() => {
     dispatch(getPosts());
@@ -27,7 +37,12 @@ const PostsList = () => {
           PY
         </Button>
         <Input
-          sx={{ width: "25%", marginLeft: 4 }}
+          sx={{
+            width: "25%",
+            marginLeft: 4,
+            background: "lightgray",
+            borderRadius: "5px",
+          }}
           placeholder="Search"
           //   onChange={(e) => setSearchValue(e.target.value)}
           //   value={searchValue}
@@ -52,6 +67,16 @@ const PostsList = () => {
       {posts.map((post) => (
         <PostsItem key={post.id} post={post} />
       ))}
+      <div className="flex text-center justify-center mt-4 mb-20">
+        <Stack sx={{ marginTop: "0" }} className="pagination">
+          <Pagination
+            className="paginationBody"
+            count={totalPages}
+            page={currentPage}
+            onChange={handleChange}
+          />
+        </Stack>
+      </div>
     </div>
   );
 };

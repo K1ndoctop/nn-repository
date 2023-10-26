@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setPosts } from "../../store/posts/postsAction";
 import styles from "./post.module.css";
+import { useNavigate } from "react-router-dom";
 
 const PostCreate = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [addPost, setAddPost] = useState({
     title: "",
     description: "",
-    image: "",
-    category: 0,
     price: "",
+    category: {},
   });
   return (
     <>
       <div className={`w-full h-screen absolute ${styles.bg}`}></div>
-      <div className="md:pl-32 w-full h-screen relative flex justify-center items-center overflow-hidden">
+      <div className="md:pl-32 w-full h-screen relative flex justify-center items-center overflow-hidden ml-6">
         <div className="lg:w-1/2">
           <h3 className="pt-2 pb-4 text-2xl text-center font-semibold">
             Добавить пост
@@ -45,35 +46,55 @@ const PostCreate = () => {
                 className="m-2 p-2 border rounded-lg"
                 type="text"
                 placeholder="Заголовок"
-                onChange={(e) => setAddPost({ title: e.target.value })}
+                onChange={(e) =>
+                  setAddPost({ ...addPost, title: e.target.value })
+                }
               />
               <textarea
                 className="m-2 p-2 border rounded-lg lg:h-32"
                 type="text"
                 placeholder="Описание"
-                onChange={(e) => setAddPost({ description: e.target.value })}
-              />
-              <input
-                className="m-2 p-2 border rounded-lg"
-                type="text"
-                placeholder="Фото"
-                onChange={(e) => setAddPost({ image: e.target.value })}
-              />
-              <input
-                className="m-2 p-2 border rounded-lg"
-                type="numbers"
-                placeholder="Категория"
-                onChange={(e) => setAddPost({ category: e.target.value })}
+                onChange={(e) =>
+                  setAddPost({ ...addPost, description: e.target.value })
+                }
               />
               <input
                 className="m-2 p-2 border rounded-lg"
                 type="text"
                 placeholder="Цена"
-                onChange={(e) => setAddPost({ price: e.target.value })}
+                onChange={(e) =>
+                  setAddPost({ ...addPost, price: e.target.value })
+                }
               />
+              <select
+                className="m-2 p-2 border rounded-lg"
+                onChange={(e) =>
+                  setAddPost({ ...addPost, category: e.target.value })
+                }
+                value={addPost.category.title}
+              >
+                <option disabled>Choose category</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+              </select>
               <button
                 className="m-2 p-2 border rounded-lg bg-blue-400 hover:bg-blue-500"
-                onClick={() => dispatch(setPosts({ addPost }))}
+                onClick={() => {
+                  dispatch(setPosts({ addPost }));
+                  navigate("/home");
+                }}
               >
                 Save
               </button>

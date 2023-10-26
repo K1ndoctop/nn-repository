@@ -17,7 +17,7 @@ const MainRoutes = () => {
     {
       id: 1,
       path: "/",
-      element: <HomePage />,
+      element: <RegisterPage />,
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const MainRoutes = () => {
     },
     {
       id: 5,
-      path: "/edit-post",
+      path: "/edit-post/:id",
       element: <PostEdit />,
     },
     {
@@ -46,8 +46,8 @@ const MainRoutes = () => {
     },
     {
       id: 8,
-      path: "/register",
-      element: <RegisterPage />,
+      path: "/home",
+      element: <HomePage />,
     },
     {
       id: 10,
