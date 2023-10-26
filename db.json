@@ -8,6 +8,15 @@
       "password": "12345678",
       "password_confirm": "12345678",
       "id": 1
+    },
+    {
+      "is_admin": false,
+      "first_name": "Малик",
+      "last_name": "Вундиза",
+      "email": "malikvundiz@gmail.com",
+      "password": "0709301103",
+      "password_confirm": "0709301103",
+      "id": 2
     }
   ],
   "tasks": [

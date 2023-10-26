@@ -8,8 +8,17 @@ const postsSlice = createSlice({
     onePost: null,
     loading: false,
     status: "",
+    currentPage: 1,
+    totalPages: 5,
   },
-  reducers: {},
+  reducers: {
+    changePostPage: (state, action) => {
+      state.currentPage = action.payload.page;
+    },
+    clearOnePost: (state) => {
+      state.onePost = null;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getPosts.pending, (state) => {
@@ -37,4 +46,5 @@ const postsSlice = createSlice({
   },
 });
 
+export const { changePostPage, clearOnePost } = postsSlice.actions;
 export default postsSlice.reducer;

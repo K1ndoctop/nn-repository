@@ -31,7 +31,6 @@ const PostsItem = ({ post }) => {
         </CardContent>
         <Button
           onClick={() => {
-            dispatch(getOnePost(post.id));
             navigate(`/edit-post/${post.id}`);
           }}
         >

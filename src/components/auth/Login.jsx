@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { LoginUser } from "../../store/users/usersActions";
 import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -12,6 +14,7 @@ const Login = () => {
       dispatch(LoginUser({ email: email, password: password }));
       setEmail("");
       setPassword("");
+      navigate("/home");
     } else {
       alert("empty");
     }
@@ -121,15 +124,17 @@ const Login = () => {
               </div>
 
               <div className="mt-4 col-span-6 sm:flex sm:items-center sm:gap-4">
-                <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                onClick={login}>
+                <button
+                  className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
+                  onClick={login}
+                >
                   войти в аккаунт
                 </button>
 
                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                   У вас еще нет аккаунта?
                   <a href="#" className="text-gray-700 underline">
-                    <Link to='/register' >Регистрация</Link>
+                    <Link to="/register">Регистрация</Link>
                   </a>
                   .
                 </p>

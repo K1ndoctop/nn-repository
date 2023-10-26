@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainRoutes from "./routing/MainRoutes";
-
-import PostsList from "./components/ribbon/PostsList";
-import Sidebar from "./components/ui/Sidebar/Sidebar";
-import Burger from "./components/ui/Burger/Burger";
+import { checkLogin, updateToken } from "./helpers/functions";
+import { useNavigate } from "react-router-dom";
 
 const App = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    updateToken();
+  }, []);
+  useEffect(() => {
+    if (!checkLogin()) {
+      navigate("/");
+    }
+  }, []);
   return (
     <div>
-      <Burger />
-
       <MainRoutes />
     </div>
   );

@@ -190,13 +190,13 @@ const Register = () => {
 
               <div className="col-span-6">
                 <p className="text-sm text-gray-500">
-                Создавая учетную запись, вы соглашаетесь с нашими
+                  Создавая учетную запись, вы соглашаетесь с нашими
                   <a href="#" className="text-gray-700 underline">
-                  условия и положения
+                    условия и положения
                   </a>
-                  и 
+                  и
                   <a href="#" className="text-gray-700 underline">
-                  политика конфиденциальности
+                    политика конфиденциальности
                   </a>
                   .
                 </p>

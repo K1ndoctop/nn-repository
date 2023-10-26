@@ -13,37 +13,35 @@ import { create } from "@mui/material/styles/createTransitions";
 export const registerUser = createAsyncThunk(
   "users/registerUser",
   async (user, { dispatch }) => {
-    const { data } = await axios.post(REGISTER_API, {email: user.email, password: user.password, password_confirm: user.password_confirm})
-    await axios.post('http://localhost:8000/users', user)
+    const { data } = await axios.post(REGISTER_API, {
+      email: user.email,
+      password: user.password,
+      password_confirm: user.password_confirm,
+    });
+    await axios.post("http://localhost:8000/users", user);
   }
 );
 
 export const deleteUser = createAsyncThunk(
-    'users/deleteUser',
-    async (id, {dispatch}) => {
-        const {data} = await axios.get('http://localhost:8000/users')
-        const res = data.filter(item => item.id !== id)
-        await axios.patch('http://localhost:8000/users', res)
-        dispatch(getAllUsers())
-    }
-    )
-
-export const getAllUsers = createAsyncThunk(
-  'users/getAllUsers',
-  async () => {
-    const {data} = await axios.get('http://localhost:8000/users')
-    return data
+  "users/deleteUser",
+  async (id, { dispatch }) => {
+    const { data } = await axios.get("http://localhost:8000/users");
+    const res = data.filter((item) => item.id !== id);
+    await axios.patch("http://localhost:8000/users", res);
+    dispatch(getAllUsers());
   }
-  )
+);
 
-export const getOneUser = createAsyncThunk(
-    'users/getOneUser',
-    async (id) => {
-      const {data} = await axios.get(`http://localhost:8000/users`)
-      const res = data.find(item => item.id === id)
-      return res
-    }
-    )
+export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
+  const { data } = await axios.get("http://localhost:8000/users");
+  return data;
+});
+
+export const getOneUser = createAsyncThunk("users/getOneUser", async (id) => {
+  const { data } = await axios.get(`http://localhost:8000/users`);
+  const res = data.find((item) => item.id === id);
+  return res;
+});
 
 export const LoginUser = createAsyncThunk("users/Login", async (user) => {
   const { data } = await axios.post(LOGIN_API, user);

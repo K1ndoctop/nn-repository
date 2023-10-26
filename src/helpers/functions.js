@@ -1,4 +1,5 @@
 import axios from "axios";
+import { TOKEN_FERFESH } from "./consts";
 
 export const getTotalPages = async (url) => {
   const { data } = await axios.get(url);
@@ -17,6 +18,24 @@ export const addEmail = (email) => {
 export const getToken = () => {
   const token = JSON.parse(localStorage.getItem("token"));
   return token;
+};
+
+export const updateToken = () => {
+  let updateFunc = setInterval(async () => {
+    const tokens = JSON.parse(localStorage.getItem("token"));
+    if (!tokens) return clearInterval(updateFunc);
+    const Authorization = `Bearer ${tokens.access}`;
+    const { data } = await axios.post(
+      TOKEN_FERFESH,
+      { refresh: tokens.refresh },
+      { headers: { Authorization } }
+    );
+    localStorage.setItem(
+      "tokens",
+      JSON.stringify({ refresh: tokens.refresh, access: data.access })
+    );
+    console.log(Authorization);
+  }, 1000 * 60 * 5);
 };
 
 export const getEmail = () => {

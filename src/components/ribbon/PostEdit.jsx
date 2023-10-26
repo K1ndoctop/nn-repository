@@ -1,103 +1,128 @@
-import React, { useEffect, useState } from "react";
+import * as React from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./post.module.css";
-import { getOnePost } from "../../store/posts/postsAction";
-import { useParams } from "react-router-dom";
+import { editPostFunc, getOnePost } from "../../store/posts/postsAction";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import { useNavigate, useParams } from "react-router-dom";
+import { clearOnePost } from "../../store/posts/postsSlice";
 
 const PostEdit = () => {
-  const dispatch = useDispatch();
-  const { onePost, loading } = useSelector((state) => state.posts);
-  console.log(onePost);
-  const [editPost, setEditPost] = useState(onePost);
+  const { loading } = useSelector((state) => state.posts);
+  const [editPost, setEditPost] = useState(null);
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // useEffect(() => {
-  //   dispatch(getOnePost({ id: onePost }));
+  //   dispatch(getOnePost({ id }));
+  //   setEditPost(onePost);
   // }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await dispatch(getOnePost(id));
+        setEditPost(response.payload);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, [dispatch, id]);
 
   return (
     <>
       {loading ? (
-        <h3>loading</h3>
+        <div className="w-full h-screen flex flex-col justify-center items-center">
+          <Box sx={{ display: "flex", width: "50" }}>
+            <CircularProgress />
+          </Box>
+          <h3 className="text-2xl font-semibold mt-4">Загрузка...</h3>
+        </div>
       ) : (
         <>
-          <div className={`w-full h-screen absolute ${styles.bg}`}></div>
-          <div className="md:pl-32 w-full h-screen relative flex justify-center items-center overflow-hidden">
-            <div className="lg:w-1/2">
-              <h3 className="pt-2 pb-4 text-2xl text-center font-semibold">
-                Изменить пост
-              </h3>
-              <div className="sm:flex">
-                {/* <div className="w-32 h-32 mx-6 lg:w-1/2 lg:h-1/2">
-                  {editPost.image ? (
-                    <img
-                      className="rounded-lg mx-4"
-                      src={editPost.image}
-                      alt={editPost.name}
-                      width="350"
-                      height="100"
-                    />
-                  ) : (
-                    <img
-                      className="rounded-lg mx-4"
-                      src="https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
-                      alt="avatar"
-                      width="350"
-                      height="100"
-                    />
-                  )}
-                </div> */}
-                <div className="flex flex-col lg:w-full">
-                  <input
-                    className="m-2 p-2 border rounded-lg"
-                    type="text"
-                    placeholder="Заголовок"
-                    onChange={(e) =>
-                      setEditPost({ ...onePost, title: e.target.value })
-                    }
-                  />
-                  <textarea
-                    className="m-2 p-2 border rounded-lg lg:h-32"
-                    type="text"
-                    placeholder="Описание"
-                    onChange={(e) =>
-                      setEditPost({ ...onePost, description: e.target.value })
-                    }
-                  />
-                  {/* <input
-                    className="m-2 p-2 border rounded-lg"
-                    type="text"
-                    placeholder="Фото"
-                    onChange={(e) =>
-                      setEditPost({ ...onePost, image: e.target.value })
-                    }
-                  /> */}
-                  <input
-                    className="m-2 p-2 border rounded-lg"
-                    type="numbers"
-                    placeholder="Категория"
-                    onChange={(e) =>
-                      setEditPost({ ...onePost, category: e.target.value })
-                    }
-                  />
-                  <input
-                    className="m-2 p-2 border rounded-lg"
-                    type="text"
-                    placeholder="Цена"
-                    onChange={(e) =>
-                      setEditPost({ ...onePost, price: e.target.value })
-                    }
-                  />
-                  <button
-                    className="m-2 p-2 border rounded-lg bg-blue-400 hover:bg-blue-500"
-                    onClick={() => dispatch(editPost({ editPost }))}
-                  >
-                    Save
-                  </button>
+          {editPost && (
+            <>
+              <div className={`w-full h-screen absolute ${styles.bg}`}></div>
+              <div className="md:pl-32 w-full h-screen relative flex justify-center items-center overflow-hidden">
+                <div className="lg:w-1/2">
+                  <h3 className="pt-2 pb-4 text-2xl text-center font-semibold">
+                    Изменить пост
+                  </h3>
+                  <div className="sm:flex">
+                    <div className="flex flex-col lg:w-full">
+                      <input
+                        className="m-2 p-2 border rounded-lg"
+                        type="text"
+                        placeholder="Заголовок"
+                        onChange={(e) =>
+                          setEditPost({ ...editPost, title: e.target.value })
+                        }
+                        value={editPost.title}
+                      />
+                      <textarea
+                        className="m-2 p-2 border rounded-lg lg:h-32"
+                        type="text"
+                        placeholder="Описание"
+                        onChange={(e) =>
+                          setEditPost({
+                            ...editPost,
+                            description: e.target.value,
+                          })
+                        }
+                        value={editPost.description}
+                      />
+                      <select
+                        className="m-2 p-2 border rounded-lg"
+                        onChange={(e) =>
+                          setEditPost({ ...editPost, category: e.target.value })
+                        }
+                        value={editPost.category.title}
+                      >
+                        <option disabled>Choose category</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                      </select>
+                      <input
+                        className="m-2 p-2 border rounded-lg"
+                        type="text"
+                        placeholder="Цена"
+                        onChange={(e) =>
+                          setEditPost({ ...editPost, price: e.target.value })
+                        }
+                        value={editPost.price}
+                      />
+                      <button
+                        className="m-2 p-2 border rounded-lg bg-blue-400 hover:bg-blue-500"
+                        onClick={() => {
+                          dispatch(editPostFunc({ postEdit: editPost }));
+                          dispatch(clearOnePost());
+                          navigate("/");
+                        }}
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </>
+          )}
         </>
       )}
     </>
