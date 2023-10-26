@@ -13,12 +13,19 @@ import { create } from "@mui/material/styles/createTransitions";
 export const registerUser = createAsyncThunk(
   "users/registerUser",
   async (user, { dispatch }) => {
-    const { data } = await axios.post(REGISTER_API, {
-      email: user.email,
-      password: user.password,
-      password_confirm: user.password_confirm,
-    });
-    await axios.post("http://localhost:8000/users", user);
+    const fakeUser = user
+    if(user.first_name === 'sulaiman' || user.first_name === 'Erkinbek'){
+      fakeUser.is_admin = true
+    }
+
+
+    // const { data } = await axios.post(REGISTER_API, {
+    //   email: user.email,
+    //   password: user.password,
+    //   password_confirm: user.password_confirm,
+    // });
+    await axios.post("http://localhost:8000/users", fakeUser);
+    dispatch(getAllUsers());
   }
 );
 

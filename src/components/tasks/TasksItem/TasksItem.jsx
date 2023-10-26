@@ -9,7 +9,7 @@ const TasksItem = ({ task }) => {
   const dispatch = useDispatch();
   return (
     <div
-      style={{ border: "1px solid black", borderRadius: "5px", width: "20%" }}
+      style={{ border: "1px solid black", borderRadius: "5px", width: "80%" }}
     >
       <div className="">
         <h4>Task name: {task.name}</h4>

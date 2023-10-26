@@ -1,0 +1,10 @@
+.studentsTasks {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.board {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
