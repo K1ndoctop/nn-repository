@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,7 +15,6 @@ const Login = () => {
       setEmail("");
       setPassword("");
       navigate("/home");
-
     } else {
       alert("empty");
     }
@@ -100,7 +99,7 @@ const Login = () => {
                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                   У вас еще нет аккаунта?
                   <a href="#" className="text-gray-700 underline">
-                    <Link to="/register">Регистрация</Link>
+                    <Link to="/">Регистрация</Link>
                   </a>
                   .
                 </p>

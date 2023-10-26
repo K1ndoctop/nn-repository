@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { createTask, getCategories } from "../../../store/tasks/tasksActions";
+import styles from "../../ribbon/post.module.css";
 
 const TasksCreate = () => {
   const { categories } = useSelector((state) => state.tasks);
@@ -23,42 +24,62 @@ const TasksCreate = () => {
   }, []);
 
   return (
-    <div>
-      <h3>Create Task</h3>
-      <input
-        placeholder="Name"
-        type="text"
-        onChange={(e) => setTask({ ...task, name: e.target.value })}
-      />
+    <>
+      <div className={`w-full h-screen absolute ${styles.bg}`}></div>
+      <div className="md:pl-32 w-full h-screen relative flex justify-center items-center overflow-hidden">
+        <div className="lg:w-1/2 ml-16">
+          <h3 className="pt-2 pb-4 text-2xl text-center font-semibold">
+            Добавить задание
+          </h3>
+          <div className="sm:flex">
+            <div className="flex flex-col lg:w-full">
+              <input
+                className="m-2 p-2 border rounded-lg"
+                placeholder="Name"
+                type="text"
+                onChange={(e) => setTask({ ...task, name: e.target.value })}
+              />
 
-      <input
-        placeholder="Description"
-        type="text"
-        onChange={(e) => setTask({ ...task, description: e.target.value })}
-      />
+              <textarea
+                className="m-2 p-2 border rounded-lg lg:h-32"
+                placeholder="Description"
+                type="text"
+                onChange={(e) =>
+                  setTask({ ...task, description: e.target.value })
+                }
+              />
 
-      <input
-        placeholder="Points"
-        type="text"
-        onChange={(e) => setTask({ ...task, points: e.target.value })}
-      />
+              <textarea
+                className="m-2 p-2 border rounded-lg"
+                placeholder="Points"
+                type="text"
+                onChange={(e) => setTask({ ...task, points: e.target.value })}
+              />
 
-      <select onChange={(e) => setTask({ ...task, group: e.target.value })}>
-        <option disabled>Choose group</option>
-        {categories.map((category) => (
-          <option value={category}>{category}</option>
-        ))}
-      </select>
+              <select
+                className="m-2 p-2 border rounded-lg"
+                onChange={(e) => setTask({ ...task, group: e.target.value })}
+              >
+                <option disabled>Choose group</option>
+                {categories.map((category) => (
+                  <option value={category}>{category}</option>
+                ))}
+              </select>
 
-      <button
-        onClick={() => {
-          dispatch(createTask({ task }));
-          navigate("/tasks");
-        }}
-      >
-        Create
-      </button>
-    </div>
+              <button
+                className="m-2 p-2 border rounded-lg bg-blue-400 hover:bg-blue-500"
+                onClick={() => {
+                  dispatch(createTask({ task }));
+                  navigate("/tasks");
+                }}
+              >
+                Create
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
