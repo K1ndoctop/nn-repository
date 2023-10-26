@@ -24,11 +24,11 @@ const Burger = () => {
     <div className="fixed z-20 bg-[#000000a0] h-full p-5 text-stone-200">
       <button className="burgerBtn" onClick={toggleMenu}>
         {isMenuOpen ? (
-          <div className="burger--square__close">
+          <div className="burger--square__close cursor-pointer">
             <p className="font-bold text-3xl">X</p>
           </div>
         ) : (
-          <div className="burger--square__open flex">
+          <div className="burger--square__open flex cursor-pointer">
             <p className=" font-bold ml-2 mb-3 text-3xl">&#9776;</p>
           </div>
         )}
@@ -47,20 +47,24 @@ const Burger = () => {
           {/* <div onClick={() => navigate("/login")}>
             <BiLogIn className="w-10 h-10 my-2" />
           </div> */}
-          <div onClick={() => navigate("/home")}>
+          <div className="cursor-pointer" onClick={() => navigate("/home")}>
             <AiFillHome className="w-10 h-10 my-2" />
           </div>
-          <div onClick={() => navigate("/tasks")}>
+          <div className="cursor-pointer" onClick={() => navigate("/tasks")}>
             <FaListCheck className="w-10 h-10 my-2" />
           </div>
-          <div onClick={() => navigate("/profile")}>
+          <div className="cursor-pointer" onClick={() => navigate("/profile")}>
             <BsFillFilePersonFill className="w-10 h-10 my-2" />
           </div>
-          <div onClick={() => navigate("/create-post")}>
+          <div
+            className="cursor-pointer"
+            onClick={() => navigate("/create-post")}
+          >
             <IoMdAddCircle className="w-10 h-10 my-2" />
           </div>
           {checkLogin() && (
             <div
+              className="cursor-pointer"
               onClick={() => {
                 logout();
                 navigate("/");

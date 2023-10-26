@@ -9,9 +9,8 @@ const App = () => {
     updateToken();
   }, []);
   useEffect(() => {
-    if (!checkLogin()) {
-      navigate("/");
-    }
+    if (!checkLogin()) navigate("/");
+    return;
   }, []);
   return (
     <div>
