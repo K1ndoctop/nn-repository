@@ -38,7 +38,7 @@ export const updateToken = () => {
 };
 
 export const getEmail = () => {
-  const email = localStorage.getItem("email");
+  const email = JSON.parse(localStorage.getItem("email"));
   return email;
 };
 

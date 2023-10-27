@@ -35,7 +35,6 @@
       "id": 2
     },
     {
-      "1": "",
       "is_admin": false,
       "first_name": "admin",
       "last_name": "admin",
@@ -62,7 +61,6 @@
       "id": 3
     },
     {
-      "1": "",
       "is_admin": false,
       "first_name": "malik",
       "last_name": "vundiza",
@@ -109,7 +107,7 @@
   "tasks": [
     {
       "name": "firstTest",
-      "group": "JS-34",
+      "group": "group1",
       "points": "100",
       "description": "asnkoslfanfjnlcak",
       "isDone": false,
@@ -118,7 +116,7 @@
     },
     {
       "name": "secondTest",
-      "group": "JS-35",
+      "group": "group1",
       "points": "50",
       "description": "askblfqkwl",
       "isDone": false,
@@ -127,7 +125,7 @@
     },
     {
       "name": "thirdTest",
-      "group": "JS-36",
+      "group": "group1",
       "points": "100",
       "description": "bjzkvjasbv",
       "isDone": false,
@@ -136,7 +134,7 @@
     },
     {
       "name": "fourthTest",
-      "group": "PY-28",
+      "group": "group1",
       "points": "100",
       "description": "asknvkanmwmq[p",
       "isDone": false,
@@ -145,7 +143,7 @@
     },
     {
       "name": "fifthTest",
-      "group": "PY-29",
+      "group": "group1",
       "points": "100",
       "description": "fqwwwvqwvvqw",
       "isDone": false,
@@ -154,7 +152,7 @@
     },
     {
       "name": "sixthTest",
-      "group": "PY-30",
+      "group": "group1",
       "points": "100",
       "description": "qwertrbgfbf",
       "isDone": false,
@@ -163,7 +161,7 @@
     },
     {
       "name": "seventhTest",
-      "group": "PY-30",
+      "group": "group2",
       "points": "100",
       "description": "fwqvdsxz",
       "isDone": false,

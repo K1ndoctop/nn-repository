@@ -32,14 +32,15 @@ export const getOneTask = createAsyncThunk(
 
 export const createTask = createAsyncThunk(
   "tasks/createTask",
-  async ({ task }, { dispatch, getState }) => {
-    const { users } = getState().users;
-
-    const newUsers = users.filter((user) => user.groups === task.group);
-
-    pushTasks(newUsers, task);
-
+  async ({ task, users, user }, { dispatch }) => {
     await axios.post(TASKS_API, task);
+    if (user) {
+      const user = users.find((user) => user.groups === task.group);
+
+      user.tasks.board_1.push(task);
+
+      await axios.patch(`${USERS_API}/${user.id}`, user);
+    }
     dispatch(getTasks());
     return task;
   }

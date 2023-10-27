@@ -9,6 +9,7 @@ import {
 } from "../../helpers/consts";
 import { addEmail, addToken, getToken } from "../../helpers/functions";
 import { create } from "@mui/material/styles/createTransitions";
+import { getEmail } from "../../helpers/functions";
 
 export const registerUser = createAsyncThunk(
   "users/registerUser",
@@ -43,9 +44,10 @@ export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
   return data;
 });
 
-export const getOneUser = createAsyncThunk("users/getOneUser", async (id) => {
-  const { data } = await axios.get(`http://localhost:8000/users`);
-  const res = data.find((item) => item.id === id);
+export const getOneUser = createAsyncThunk("users/getOneUser", async () => {
+  const { data } = await axios.get("http://localhost:8000/users");
+  const email = getEmail();
+  const res = data.find((item) => item.email === email);
   return res;
 });
 
