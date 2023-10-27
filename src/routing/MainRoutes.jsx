@@ -11,6 +11,7 @@ import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
 import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import Basket from "../components/basket/Basket";
+import ResetPassword from "../components/auth/ResetPassword";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -68,6 +69,11 @@ const MainRoutes = () => {
       id: 12,
       path: "/basket",
       element: <Basket />,
+    },
+    {
+      id: 12,
+      path: "/reset",
+      element: <ResetPassword />,
     }
   ];
   return (

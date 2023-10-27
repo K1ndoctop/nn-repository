@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllUsers, getOneUser, getUser } from "./usersActions";
+import { findUser, getAllUsers, getOneUser, getUser } from "./usersActions";
 
 const usersSlice = createSlice({
   name: "users",
@@ -33,6 +33,7 @@ const usersSlice = createSlice({
           state.oneUser = action.payload
           state.loading = false
         })
+
 }
 });
 

@@ -6,19 +6,18 @@ export const getTotalPages = async (url) => {
   return totalPages;
 };
 
-
 export const addToken = (token) => {
-    localStorage.setItem("token", JSON.stringify(token))
-}
+  localStorage.setItem("token", JSON.stringify(token));
+};
 
-export const addEmail  = (email) => {
-    localStorage.setItem("email", JSON.stringify(email))
-}
+export const addEmail = (email) => {
+  localStorage.setItem("email", JSON.stringify(email));
+};
 
 export const getToken = () => {
-    const token = JSON.parse(localStorage.getItem("token"))
-    return token
-}
+  const token = JSON.parse(localStorage.getItem("token"));
+  return token;
+};
 
 export const updateToken = () => {
   let updateFunc = setInterval(async () => {
@@ -39,17 +38,17 @@ export const updateToken = () => {
 };
 
 export const getEmail = () => {
-    const email = localStorage.getItem("email")
-    return email
-}
+  const email = JSON.parse(localStorage.getItem("email"));
+  return email;
+};
 
 export const logout = () => {
-    localStorage.removeItem("token")
-    localStorage.removeItem("email")
-}
+  localStorage.removeItem("token");
+  localStorage.removeItem("email");
+};
 
 export const checkLogin = () => {
-    const data = localStorage.getItem("token")
-    if(data) return false
-    return true
-}
+  const data = localStorage.getItem("token");
+  if (!data) return false;
+  return true;
+};
