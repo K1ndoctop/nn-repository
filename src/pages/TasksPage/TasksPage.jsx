@@ -21,7 +21,7 @@ const TasksPage = () => {
           <TasksList />
         </div>
         <div
-          className="w-12 h-12 bg-green-700 rounded-full border-black border flex justify-center items-center absolute bottom-8 right-8"
+          className="w-12 h-12 bg-green-700 rounded-full border-black border flex justify-center items-center fixed bottom-16 right-16"
           onClick={() => navigate("/tasksCreate")}
         >
           <button
