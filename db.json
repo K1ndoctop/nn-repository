@@ -58,6 +58,7 @@
       "email": "malikvundiz@gmail.com",
       "password": "0709301103",
       "password_confirm": "0709301103",
+
       "groups": ["JS-35"],
       "tasks": {
         "board_1": [],
@@ -84,6 +85,7 @@
       "coins": 0,
       "payedMonths": 1,
       "id": 4
+
     }
   ],
   "tasks": [
