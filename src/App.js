@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import MainRoutes from "./routing/MainRoutes";
 import { checkLogin, updateToken } from "./helpers/functions";
 import { useNavigate } from "react-router-dom";
+import Sidebar from "./components/ui/Sidebar/Sidebar";
 
 const App = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const App = () => {
   }, []);
   return (
     <div>
+      {/* <Sidebar /> */}
       <MainRoutes />
     </div>
   );

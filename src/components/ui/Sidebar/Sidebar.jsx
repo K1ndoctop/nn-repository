@@ -64,6 +64,14 @@ const Sidebar = () => {
           <h3 className="text-lg font-normal">Выйти</h3>
         </div>
       )}
+      <button
+        onClick={() => {
+          navigate("/cart");
+        }}
+        style={{ backgroundColor: "#ffac04" }}
+      >
+        Оплатита за курс
+      </button>
       {/* <NavLink
         to="/"
         className="text-xl w-28  bg-gray-500 rounded-md text-center"

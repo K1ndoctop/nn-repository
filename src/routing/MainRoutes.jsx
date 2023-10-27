@@ -10,6 +10,7 @@ import PostCreatePage from "../pages/PostCreatePage";
 import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
 import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
+import Cart from "../components/cart/Cart";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -62,6 +63,11 @@ const MainRoutes = () => {
       id: 12,
       path: "/profile",
       element: <ProfilePage />,
+    },
+    {
+      id: 13,
+      path: "/cart",
+      element: <Cart />,
     },
   ];
   return (

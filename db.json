@@ -33,6 +33,57 @@
       "coins": 0,
       "payedMonths": 1,
       "id": 2
+    },
+    {
+      "is_admin": false,
+      "first_name": "admin",
+      "last_name": "admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": ["JS-35"],
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 3
+    },
+    {
+      "is_admin": false,
+      "first_name": "malik",
+      "last_name": "vundiza",
+      "email": "malikvundiz@gmail.com",
+      "password": "0709301103",
+      "password_confirm": "0709301103",
+      "groups": ["JS-35"],
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 4
+    },
+    {
+      "is_admin": false,
+      "first_name": "erkintest",
+      "last_name": "testov",
+      "email": "erkintest@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": [],
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 4
     }
   ],
   "tasks": [
