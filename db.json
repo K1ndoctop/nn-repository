@@ -7,21 +7,103 @@
       "email": "sulaimanmind862@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": [],
-      "tasks": [],
+      "groups": "JS-32",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
       "points": 0,
       "coins": 0,
       "payedMonths": 1,
       "id": 1
     },
     {
+      "is_admin": true,
+      "first_name": "test",
+      "last_name": "tester",
+      "email": "test@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-36",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 2
+    },
+    {
+      "1": "",
       "is_admin": false,
-      "first_name": "Малик",
-      "last_name": "Вундиза",
+      "first_name": "admin",
+      "last_name": "admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [
+          {
+            "name": "wefeuiwfhbui",
+            "group": "JS-35",
+            "points": "23456",
+            "description": "weobewu",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 3
+    },
+    {
+      "1": "",
+      "is_admin": false,
+      "first_name": "malik",
+      "last_name": "vundiza",
       "email": "malikvundiz@gmail.com",
       "password": "0709301103",
       "password_confirm": "0709301103",
-      "id": 2
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [
+          {
+            "name": "wefeuiwfhbui",
+            "group": "JS-35",
+            "points": "23456",
+            "description": "weobewu",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 4
+    },
+    {
+      "is_admin": false,
+      "first_name": "erkintest",
+      "last_name": "testov",
+      "email": "erkintest@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-34",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 4
     }
   ],
   "tasks": [
@@ -89,22 +171,103 @@
       "id": 7
     },
     {
-      "name": "eighthTest",
-      "group": "JS-34",
-      "points": "100",
-      "description": "acsjbxnzkqp",
-      "isDone": true,
+      "name": "a",
+      "group": "JS-36",
+      "points": "21",
+      "description": "a",
+      "isDone": false,
       "isChecked": false,
       "id": 8
     },
     {
-      "name": "ninthTest",
+      "name": "a",
       "group": "JS-36",
-      "points": "100",
-      "description": "vzasvbssbd",
+      "points": "a",
+      "description": "a",
       "isDone": false,
       "isChecked": false,
       "id": 9
+    },
+    {
+      "name": "a",
+      "group": "JS-36",
+      "points": "1",
+      "description": "a",
+      "isDone": false,
+      "isChecked": false,
+      "id": 10
+    },
+    {
+      "name": "a",
+      "group": "JS-36",
+      "points": "1",
+      "description": "a",
+      "isDone": false,
+      "isChecked": false,
+      "id": 11
+    },
+    {
+      "name": "a",
+      "group": "JS-36",
+      "points": "1",
+      "description": "a",
+      "isDone": false,
+      "isChecked": false,
+      "id": 12
+    },
+    {
+      "name": "ehfuiehfuh",
+      "group": "JS-35",
+      "points": "567",
+      "description": "ueoebgewuifhb",
+      "isDone": false,
+      "isChecked": false,
+      "id": 13
+    },
+    {
+      "name": "suirfghuihg",
+      "group": "JS-35",
+      "points": "325",
+      "description": "iurgburig",
+      "isDone": false,
+      "isChecked": false,
+      "id": 14
+    },
+    {
+      "name": "ewhfeuiwhf",
+      "group": "JS-35",
+      "points": "34567",
+      "description": "wbueguifb",
+      "isDone": false,
+      "isChecked": false,
+      "id": 15
+    },
+    {
+      "name": "efhueih",
+      "group": "JS-35",
+      "points": "4567",
+      "description": "ewubgewuib",
+      "isDone": false,
+      "isChecked": false,
+      "id": 16
+    },
+    {
+      "name": "udbhfuiewfhduh",
+      "group": "JS-35",
+      "points": "23456",
+      "description": "iwerbgewuifgh",
+      "isDone": false,
+      "isChecked": false,
+      "id": 17
+    },
+    {
+      "name": "wefeuiwfhbui",
+      "group": "JS-35",
+      "points": "23456",
+      "description": "weobewu",
+      "isDone": false,
+      "isChecked": false,
+      "id": 18
     }
   ]
 }

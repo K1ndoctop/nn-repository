@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { TASKS_API } from "../../helpers/consts";
+import { TASKS_API, USERS_API } from "../../helpers/consts";
 import { getTotalPages } from "../../helpers/functions";
 
 export const getTasks = createAsyncThunk(
@@ -32,11 +32,35 @@ export const getOneTask = createAsyncThunk(
 
 export const createTask = createAsyncThunk(
   "tasks/createTask",
-  async ({ task }, { dispatch }) => {
+  async ({ task }, { dispatch, getState }) => {
+    const { users } = getState().users;
+
+    const newUsers = users.filter((user) => user.groups === task.group);
+
+    pushTasks(newUsers, task);
+
     await axios.post(TASKS_API, task);
     dispatch(getTasks());
+    return task;
   }
 );
+
+const pushTasks = (users, task) => {
+  try {
+    const updatedUsers = users.map((user) => {
+      // Создаем копию пользователя и массива board_1
+      const userCopy = { ...user };
+      userCopy.tasks = { ...user.tasks, board_1: [...user.tasks.board_1] };
+      // Добавляем значение в массив board_1
+      userCopy.tasks.board_1.push(task);
+      axios.patch(`${USERS_API}/${user.id}`, userCopy);
+      return userCopy;
+    });
+    console.log(updatedUsers);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 export const editTask = createAsyncThunk(
   "tasks/editTask",

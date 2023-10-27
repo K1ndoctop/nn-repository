@@ -160,73 +160,81 @@
 
 // export default StudentsTasks;
 
-import React, { useEffect, useState } from "react";
-import TasksItem from "../tasks/TasksItem/TasksItem";
-import { useDispatch, useSelector } from "react-redux";
-import { getTasks } from "../../store/tasks/tasksActions";
-import "./StudentsTasks.css";
-import TaskBoard from "./TaskBoard/TaskBoard";
+// import React, { useEffect, useState } from "react";
+// import TasksItem from "../tasks/TasksItem/TasksItem";
+// import { useDispatch, useSelector } from "react-redux";
+// import { getTasks } from "../../store/tasks/tasksActions";
+// import "./StudentsTasks.css";
+// import TaskBoard from "./TaskBoard/TaskBoard";
+
+// const StudentsTasks = () => {
+//   const { tasks, loading } = useSelector(({ tasks }) => tasks);
+//   const dispatch = useDispatch();
+
+//   useEffect(() => {
+//     dispatch(getTasks()).catch((error) => {
+//       console.error("Failed to load tasks:", error);
+//     });
+//   }, []);
+
+//   const [currentTasks, setCurrentTasks] = useState(
+//     tasks.filter((task) => !task.isDone)
+//   );
+//   const [doneTasks, setDoneTasks] = useState(
+//     tasks.filter((task) => task.isDone)
+//   );
+
+//   const handleDragStart = (event, taskId) => {
+//     event.dataTransfer.setData("taskId", taskId);
+//   };
+
+//   const handleDragOver = (event) => {
+//     event.preventDefault();
+//   };
+
+//   const handleDrop = (event, isDone) => {
+//     event.preventDefault();
+//     const taskId = event.dataTransfer.getData("taskId");
+//     const updatedTasks = tasks.map((task) => {
+//       if (task.id === taskId) {
+//         return { ...task, isDone };
+//       }
+//       return task;
+//     });
+//     const currentTasks = updatedTasks.filter((task) => !task.isDone);
+//     const doneTasks = updatedTasks.filter((task) => task.isDone);
+//     setCurrentTasks(currentTasks);
+//     setDoneTasks(doneTasks);
+//   };
+
+//   return (
+//     <div className="studentsTasks">
+//       <TaskBoard
+//         tasks={currentTasks}
+//         title="Текущие задания"
+//         isDone={false}
+//         handleDragStart={handleDragStart}
+//         handleDragOver={handleDragOver}
+//         handleDrop={handleDrop}
+//       />
+//       <TaskBoard
+//         tasks={doneTasks}
+//         title="Сделанные"
+//         isDone={true}
+//         handleDragStart={handleDragStart}
+//         handleDragOver={handleDragOver}
+//         handleDrop={handleDrop}
+//       />
+//     </div>
+//   );
+// };
+
+// export default StudentsTasks;
+
+import React from "react";
 
 const StudentsTasks = () => {
-  const { tasks, loading } = useSelector(({ tasks }) => tasks);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getTasks()).catch((error) => {
-      console.error("Failed to load tasks:", error);
-    });
-  }, []);
-
-  const [currentTasks, setCurrentTasks] = useState(
-    tasks.filter((task) => !task.isDone)
-  );
-  const [doneTasks, setDoneTasks] = useState(
-    tasks.filter((task) => task.isDone)
-  );
-
-  const handleDragStart = (event, taskId) => {
-    event.dataTransfer.setData("taskId", taskId);
-  };
-
-  const handleDragOver = (event) => {
-    event.preventDefault();
-  };
-
-  const handleDrop = (event, isDone) => {
-    event.preventDefault();
-    const taskId = event.dataTransfer.getData("taskId");
-    const updatedTasks = tasks.map((task) => {
-      if (task.id === taskId) {
-        return { ...task, isDone };
-      }
-      return task;
-    });
-    const currentTasks = updatedTasks.filter((task) => !task.isDone);
-    const doneTasks = updatedTasks.filter((task) => task.isDone);
-    setCurrentTasks(currentTasks);
-    setDoneTasks(doneTasks);
-  };
-
-  return (
-    <div className="studentsTasks">
-      <TaskBoard
-        tasks={currentTasks}
-        title="Текущие задания"
-        isDone={false}
-        handleDragStart={handleDragStart}
-        handleDragOver={handleDragOver}
-        handleDrop={handleDrop}
-      />
-      <TaskBoard
-        tasks={doneTasks}
-        title="Сделанные"
-        isDone={true}
-        handleDragStart={handleDragStart}
-        handleDragOver={handleDragOver}
-        handleDrop={handleDrop}
-      />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default StudentsTasks;

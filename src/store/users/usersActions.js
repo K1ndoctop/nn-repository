@@ -13,11 +13,10 @@ import { create } from "@mui/material/styles/createTransitions";
 export const registerUser = createAsyncThunk(
   "users/registerUser",
   async (user, { dispatch }) => {
-    const fakeUser = user
-    if(user.first_name === 'sulaiman' || user.first_name === 'Erkinbek'){
-      fakeUser.is_admin = true
+    const fakeUser = user;
+    if (user.first_name === "sulaiman" || user.first_name === "Erkinbek") {
+      fakeUser.is_admin = true;
     }
-
 
     // const { data } = await axios.post(REGISTER_API, {
     //   email: user.email,

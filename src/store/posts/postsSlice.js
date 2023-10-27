@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getOnePost, getPosts } from "./postsAction";
+import { getOnePost, getPosts, totalPagePosts } from "./postsAction";
 
 const postsSlice = createSlice({
   name: "posts",
@@ -43,6 +43,18 @@ const postsSlice = createSlice({
         state.loading = false;
         state.status = "error";
       });
+    // .addCase(totalPagePosts.pending, (state) => {
+    //   state.loading = true;
+    // })
+    // .addCase(totalPagePosts.fulfilled, (state, action) => {
+    //   state.loading = false;
+    //   state.totalPages = action.payload;
+    //   console.log(state.totalPages);
+    // })
+    // .addCase(totalPagePosts.rejected, (state) => {
+    //   state.loading = false;
+    //   state.status = "error";
+    // });
   },
 });
 
