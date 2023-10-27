@@ -13,7 +13,7 @@ const App = () => {
     return;
   }, []);
   return (
-    <div>
+    <div className=" bg-gradient-to-br from-slate-800 via-slate-500 to-gray-500 ">
       <MainRoutes />
     </div>
   );

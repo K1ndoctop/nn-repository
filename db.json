@@ -22,6 +22,20 @@
       "password": "0709301103",
       "password_confirm": "0709301103",
       "id": 2
+    },
+    {
+      "is_admin": false,
+      "first_name": "1",
+      "last_name": "1",
+      "email": "1@gmail.com",
+      "password": "123456",
+      "password_confirm": "123456",
+      "groups": [],
+      "tasks": [],
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 0,
+      "id": 3
     }
   ],
   "tasks": [
