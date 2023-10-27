@@ -7,18 +7,38 @@
       "email": "sulaimanmind862@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": [],
-      "tasks": [],
+      "groups": "group1",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
       "points": 0,
       "coins": 0,
       "payedMonths": 1,
       "id": 1
+    },
+    {
+      "is_admin": true,
+      "first_name": "test",
+      "last_name": "tester",
+      "email": "test@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "group2",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 2
     }
   ],
   "tasks": [
     {
       "name": "firstTest",
-      "group": "JS-34",
+      "group": "group1",
       "points": "100",
       "description": "asnkoslfanfjnlcak",
       "isDone": false,
@@ -27,7 +47,7 @@
     },
     {
       "name": "secondTest",
-      "group": "JS-35",
+      "group": "group1",
       "points": "50",
       "description": "askblfqkwl",
       "isDone": false,
@@ -36,7 +56,7 @@
     },
     {
       "name": "thirdTest",
-      "group": "JS-36",
+      "group": "group1",
       "points": "100",
       "description": "bjzkvjasbv",
       "isDone": false,
@@ -45,7 +65,7 @@
     },
     {
       "name": "fourthTest",
-      "group": "PY-28",
+      "group": "group1",
       "points": "100",
       "description": "asknvkanmwmq[p",
       "isDone": false,
@@ -54,7 +74,7 @@
     },
     {
       "name": "fifthTest",
-      "group": "PY-29",
+      "group": "group1",
       "points": "100",
       "description": "fqwwwvqwvvqw",
       "isDone": false,
@@ -63,7 +83,7 @@
     },
     {
       "name": "sixthTest",
-      "group": "PY-30",
+      "group": "group1",
       "points": "100",
       "description": "qwertrbgfbf",
       "isDone": false,
@@ -72,7 +92,7 @@
     },
     {
       "name": "seventhTest",
-      "group": "PY-30",
+      "group": "group2",
       "points": "100",
       "description": "fwqvdsxz",
       "isDone": false,
@@ -81,7 +101,7 @@
     },
     {
       "name": "eighthTest",
-      "group": "JS-34",
+      "group": "group2",
       "points": "100",
       "description": "acsjbxnzkqp",
       "isDone": true,
@@ -90,12 +110,39 @@
     },
     {
       "name": "ninthTest",
-      "group": "JS-36",
+      "group": "group2",
       "points": "100",
       "description": "vzasvbssbd",
       "isDone": false,
       "isChecked": false,
       "id": 9
+    },
+    {
+      "name": "test23",
+      "group": "group2",
+      "points": "safasaf",
+      "description": "sfasaf",
+      "isDone": false,
+      "isChecked": false,
+      "id": 10
+    },
+    {
+      "name": "test77",
+      "group": "",
+      "points": "23",
+      "description": "hvajfs",
+      "isDone": false,
+      "isChecked": false,
+      "id": 11
+    },
+    {
+      "name": "asf",
+      "group": "group2",
+      "points": "12",
+      "description": "asf",
+      "isDone": false,
+      "isChecked": false,
+      "id": 12
     }
   ]
 }

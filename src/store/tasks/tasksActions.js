@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { TASKS_API } from "../../helpers/consts";
+import { TASKS_API, USERS_API } from "../../helpers/consts";
 import { getTotalPages } from "../../helpers/functions";
 
 export const getTasks = createAsyncThunk(
@@ -32,8 +32,15 @@ export const getOneTask = createAsyncThunk(
 
 export const createTask = createAsyncThunk(
   "tasks/createTask",
-  async ({ task }, { dispatch }) => {
+  async ({ task, users, user }, { dispatch }) => {
     await axios.post(TASKS_API, task);
+    if (user) {
+      const user = users.find((user) => user.groups === task.group);
+
+      user.tasks.board_1.push(task);
+
+      await axios.patch(`${USERS_API}/${user.id}`, user);
+    }
     dispatch(getTasks());
   }
 );
