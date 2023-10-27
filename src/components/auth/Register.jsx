@@ -33,10 +33,10 @@ const Register = () => {
           password: password,
           password_confirm: passwordConfirm,
           groups: [],
-          tasks: [],
+          tasks: { board_1: [], board_2: [] },
           points: 0,
           coins: 0,
-          payedMonths: 0,
+          payedMonths: 1,
         })
       );
       setFirst_name("");

@@ -7,41 +7,91 @@
       "email": "sulaimanmind862@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": [],
-      "tasks": [],
+      "groups": "group1",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
       "points": 0,
       "coins": 0,
       "payedMonths": 1,
       "id": 1
     },
     {
-      "is_admin": false,
-      "first_name": "Малик",
-      "last_name": "Вундиза",
-      "email": "malikvundiz@gmail.com",
-      "password": "0709301103",
-      "password_confirm": "0709301103",
+      "is_admin": true,
+      "first_name": "test",
+      "last_name": "tester",
+      "email": "test@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "group2",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
       "id": 2
     },
     {
       "is_admin": false,
-      "first_name": "1",
-      "last_name": "1",
-      "email": "1@gmail.com",
-      "password": "123456",
-      "password_confirm": "123456",
-      "groups": [],
-      "tasks": [],
+      "first_name": "admin",
+      "last_name": "admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": ["JS-35"],
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
       "points": 0,
       "coins": 0,
-      "payedMonths": 0,
+      "payedMonths": 1,
       "id": 3
+    },
+    {
+      "is_admin": false,
+      "first_name": "malik",
+      "last_name": "vundiza",
+      "email": "malikvundiz@gmail.com",
+      "password": "0709301103",
+      "password_confirm": "0709301103",
+
+      "groups": ["JS-35"],
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 4
+    },
+    {
+      "is_admin": false,
+      "first_name": "erkintest",
+      "last_name": "testov",
+      "email": "erkintest@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": [],
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 4
+
     }
   ],
   "tasks": [
     {
       "name": "firstTest",
-      "group": "JS-34",
+      "group": "group1",
       "points": "100",
       "description": "asnkoslfanfjnlcak",
       "isDone": false,
@@ -50,7 +100,7 @@
     },
     {
       "name": "secondTest",
-      "group": "JS-35",
+      "group": "group1",
       "points": "50",
       "description": "askblfqkwl",
       "isDone": false,
@@ -59,7 +109,7 @@
     },
     {
       "name": "thirdTest",
-      "group": "JS-36",
+      "group": "group1",
       "points": "100",
       "description": "bjzkvjasbv",
       "isDone": false,
@@ -68,7 +118,7 @@
     },
     {
       "name": "fourthTest",
-      "group": "PY-28",
+      "group": "group1",
       "points": "100",
       "description": "asknvkanmwmq[p",
       "isDone": false,
@@ -77,7 +127,7 @@
     },
     {
       "name": "fifthTest",
-      "group": "PY-29",
+      "group": "group1",
       "points": "100",
       "description": "fqwwwvqwvvqw",
       "isDone": false,
@@ -86,7 +136,7 @@
     },
     {
       "name": "sixthTest",
-      "group": "PY-30",
+      "group": "group1",
       "points": "100",
       "description": "qwertrbgfbf",
       "isDone": false,
@@ -95,7 +145,7 @@
     },
     {
       "name": "seventhTest",
-      "group": "PY-30",
+      "group": "group2",
       "points": "100",
       "description": "fwqvdsxz",
       "isDone": false,
@@ -104,7 +154,7 @@
     },
     {
       "name": "eighthTest",
-      "group": "JS-34",
+      "group": "group2",
       "points": "100",
       "description": "acsjbxnzkqp",
       "isDone": true,
@@ -113,12 +163,39 @@
     },
     {
       "name": "ninthTest",
-      "group": "JS-36",
+      "group": "group2",
       "points": "100",
       "description": "vzasvbssbd",
       "isDone": false,
       "isChecked": false,
       "id": 9
+    },
+    {
+      "name": "test23",
+      "group": "group2",
+      "points": "safasaf",
+      "description": "sfasaf",
+      "isDone": false,
+      "isChecked": false,
+      "id": 10
+    },
+    {
+      "name": "test77",
+      "group": "",
+      "points": "23",
+      "description": "hvajfs",
+      "isDone": false,
+      "isChecked": false,
+      "id": 11
+    },
+    {
+      "name": "asf",
+      "group": "group2",
+      "points": "12",
+      "description": "asf",
+      "isDone": false,
+      "isChecked": false,
+      "id": 12
     }
   ]
 }

@@ -9,15 +9,15 @@ import {
 } from "../../helpers/consts";
 import { addEmail, addToken, getToken } from "../../helpers/functions";
 import { create } from "@mui/material/styles/createTransitions";
+import { getEmail } from "../../helpers/functions";
 
 export const registerUser = createAsyncThunk(
   "users/registerUser",
   async (user, { dispatch }) => {
-    const fakeUser = user
-    if(user.first_name === 'sulaiman' || user.first_name === 'Erkinbek'){
-      fakeUser.is_admin = true
+    const fakeUser = user;
+    if (user.first_name === "sulaiman" || user.first_name === "Erkinbek") {
+      fakeUser.is_admin = true;
     }
-
 
     // const { data } = await axios.post(REGISTER_API, {
     //   email: user.email,
@@ -44,9 +44,10 @@ export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
   return data;
 });
 
-export const getOneUser = createAsyncThunk("users/getOneUser", async (id) => {
-  const { data } = await axios.get(`http://localhost:8000/users`);
-  const res = data.find((item) => item.id === id);
+export const getOneUser = createAsyncThunk("users/getOneUser", async () => {
+  const { data } = await axios.get("http://localhost:8000/users");
+  const email = getEmail();
+  const res = data.find((item) => item.email === email);
   return res;
 });
 
