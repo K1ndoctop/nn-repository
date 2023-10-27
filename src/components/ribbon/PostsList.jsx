@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPosts } from "../../store/posts/postsAction";
+import { getPosts, totalPagePosts } from "../../store/posts/postsAction";
 import PostsItem from "./PostsItem";
 import { Button, Input } from "@mui/material";
 import { Stack } from "@mui/material";
@@ -22,7 +22,7 @@ const PostsList = () => {
 
   useEffect(() => {
     dispatch(getPosts());
-    // setSearch(posts);
+    // dispatch(totalPagePosts());
   }, []);
 
   return (

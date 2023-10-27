@@ -30,7 +30,7 @@ export const updateToken = () => {
       { headers: { Authorization } }
     );
     localStorage.setItem(
-      "tokens",
+      "token",
       JSON.stringify({ refresh: tokens.refresh, access: data.access })
     );
     console.log(Authorization);

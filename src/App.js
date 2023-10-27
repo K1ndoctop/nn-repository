@@ -10,6 +10,7 @@ const App = () => {
     updateToken();
   }, []);
   useEffect(() => {
+    checkLogin();
     if (!checkLogin()) navigate("/");
     return;
   }, []);

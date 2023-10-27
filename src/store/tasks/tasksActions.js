@@ -42,8 +42,26 @@ export const createTask = createAsyncThunk(
       await axios.patch(`${USERS_API}/${user.id}`, user);
     }
     dispatch(getTasks());
+    return task;
   }
 );
+
+const pushTasks = (users, task) => {
+  try {
+    const updatedUsers = users.map((user) => {
+      // Создаем копию пользователя и массива board_1
+      const userCopy = { ...user };
+      userCopy.tasks = { ...user.tasks, board_1: [...user.tasks.board_1] };
+      // Добавляем значение в массив board_1
+      userCopy.tasks.board_1.push(task);
+      axios.patch(`${USERS_API}/${user.id}`, userCopy);
+      return userCopy;
+    });
+    console.log(updatedUsers);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 export const editTask = createAsyncThunk(
   "tasks/editTask",

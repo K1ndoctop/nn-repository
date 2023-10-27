@@ -7,7 +7,7 @@
       "email": "sulaimanmind862@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": "group1",
+      "groups": "JS-32",
       "tasks": {
         "board_1": [],
         "board_2": []
@@ -24,7 +24,7 @@
       "email": "test@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": "group2",
+      "groups": "JS-36",
       "tasks": {
         "board_1": [],
         "board_2": []
@@ -41,9 +41,18 @@
       "email": "admin@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": ["JS-35"],
+      "groups": "JS-35",
       "tasks": {
-        "board_1": [],
+        "board_1": [
+          {
+            "name": "wefeuiwfhbui",
+            "group": "JS-35",
+            "points": "23456",
+            "description": "weobewu",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
         "board_2": []
       },
       "points": 0,
@@ -58,10 +67,18 @@
       "email": "malikvundiz@gmail.com",
       "password": "0709301103",
       "password_confirm": "0709301103",
-
-      "groups": ["JS-35"],
+      "groups": "JS-35",
       "tasks": {
-        "board_1": [],
+        "board_1": [
+          {
+            "name": "wefeuiwfhbui",
+            "group": "JS-35",
+            "points": "23456",
+            "description": "weobewu",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
         "board_2": []
       },
       "points": 0,
@@ -76,7 +93,7 @@
       "email": "erkintest@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": [],
+      "groups": "JS-34",
       "tasks": {
         "board_1": [],
         "board_2": []
@@ -85,7 +102,6 @@
       "coins": 0,
       "payedMonths": 1,
       "id": 4
-
     }
   ],
   "tasks": [
@@ -153,49 +169,103 @@
       "id": 7
     },
     {
-      "name": "eighthTest",
-      "group": "group2",
-      "points": "100",
-      "description": "acsjbxnzkqp",
-      "isDone": true,
+      "name": "a",
+      "group": "JS-36",
+      "points": "21",
+      "description": "a",
+      "isDone": false,
       "isChecked": false,
       "id": 8
     },
     {
-      "name": "ninthTest",
-      "group": "group2",
-      "points": "100",
-      "description": "vzasvbssbd",
+      "name": "a",
+      "group": "JS-36",
+      "points": "a",
+      "description": "a",
       "isDone": false,
       "isChecked": false,
       "id": 9
     },
     {
-      "name": "test23",
-      "group": "group2",
-      "points": "safasaf",
-      "description": "sfasaf",
+      "name": "a",
+      "group": "JS-36",
+      "points": "1",
+      "description": "a",
       "isDone": false,
       "isChecked": false,
       "id": 10
     },
     {
-      "name": "test77",
-      "group": "",
-      "points": "23",
-      "description": "hvajfs",
+      "name": "a",
+      "group": "JS-36",
+      "points": "1",
+      "description": "a",
       "isDone": false,
       "isChecked": false,
       "id": 11
     },
     {
-      "name": "asf",
-      "group": "group2",
-      "points": "12",
-      "description": "asf",
+      "name": "a",
+      "group": "JS-36",
+      "points": "1",
+      "description": "a",
       "isDone": false,
       "isChecked": false,
       "id": 12
+    },
+    {
+      "name": "ehfuiehfuh",
+      "group": "JS-35",
+      "points": "567",
+      "description": "ueoebgewuifhb",
+      "isDone": false,
+      "isChecked": false,
+      "id": 13
+    },
+    {
+      "name": "suirfghuihg",
+      "group": "JS-35",
+      "points": "325",
+      "description": "iurgburig",
+      "isDone": false,
+      "isChecked": false,
+      "id": 14
+    },
+    {
+      "name": "ewhfeuiwhf",
+      "group": "JS-35",
+      "points": "34567",
+      "description": "wbueguifb",
+      "isDone": false,
+      "isChecked": false,
+      "id": 15
+    },
+    {
+      "name": "efhueih",
+      "group": "JS-35",
+      "points": "4567",
+      "description": "ewubgewuib",
+      "isDone": false,
+      "isChecked": false,
+      "id": 16
+    },
+    {
+      "name": "udbhfuiewfhduh",
+      "group": "JS-35",
+      "points": "23456",
+      "description": "iwerbgewuifgh",
+      "isDone": false,
+      "isChecked": false,
+      "id": 17
+    },
+    {
+      "name": "wefeuiwfhbui",
+      "group": "JS-35",
+      "points": "23456",
+      "description": "weobewu",
+      "isDone": false,
+      "isChecked": false,
+      "id": 18
     }
   ]
 }
