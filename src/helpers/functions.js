@@ -21,26 +21,27 @@ export const getToken = () => {
 
 export const updateToken = () => {
   let updateFunc = setInterval(async () => {
-    const tokens = JSON.parse(localStorage.getItem("token"));
-    if (!tokens) return clearInterval(updateFunc);
-    const Authorization = `Bearer ${tokens.access}`;
-    const { data } = await axios.post(
-      TOKEN_FERFESH,
-      { refresh: tokens.refresh },
-      { headers: { Authorization } }
-    );
-    localStorage.setItem(
-      "tokens",
-      JSON.stringify({ refresh: tokens.refresh, access: data.access })
-    );
-    console.log(Authorization);
-  }, 1000 * 60 * 5);
-};
+    const token = getToken();
+    if (!token) return clearInterval(updateFunc);
+    const Authorization = `Bearer ${token.access}`;
+    const config = {
+      headers: {
+        Authorization,
+      },
+    };
+    const requestData = {
+      refresh: token.refresh,
+    };
 
-export const getEmail = () => {
-
-  const email = JSON.parse(localStorage.getItem("email"));
-  return email;
+    try {
+      const res = await axios.post(TOKEN_FERFESH, requestData, config);
+      console.log(res);
+      addToken({ access: res.data.access, refresh: token.refresh });
+      console.log(Authorization);
+    } catch (error) {
+      console.error("Error refreshing token:", error);
+    }
+  }, 1000 * 5 * 1);
 };
 
 export const logout = () => {
@@ -53,3 +54,8 @@ export const checkLogin = () => {
   if (!data) return false;
   return true;
 };
+
+export const getEmail =() => {
+  const email = JSON.parse(localStorage.getItem("email"))
+  return email
+}
