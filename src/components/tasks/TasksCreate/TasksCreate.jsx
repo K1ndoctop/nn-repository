@@ -62,6 +62,7 @@ const TasksCreate = () => {
                 onChange={(e) => setTask({ ...task, group: e.target.value })}
               >
                 <option disabled>Choose group</option>
+                <option>JS-35</option>
                 {categories.map((category) => (
                   <option key={category} value={category}>
                     {category}
