@@ -8,7 +8,7 @@
       "email": "sulaimanmind862@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": "JS-32",
+      "groups": "JS-35",
       "tasks": {
         "board_1": [],
         "board_2": []
@@ -132,6 +132,15 @@
       "isDone": false,
       "isChecked": false,
       "id": 1
+    },
+    {
+      "name": "test",
+      "group": "",
+      "points": "15",
+      "description": "asfnkqwnfkqwnfl",
+      "isDone": false,
+      "isChecked": false,
+      "id": 2
     }
   ]
 }
