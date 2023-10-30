@@ -6,6 +6,7 @@ import {
   CHECK_TOKEN_API,
   PROFILE_API,
   TOKEN_FERFESH,
+  USERS_API,
 } from "../../helpers/consts";
 import { addEmail, addToken, getToken } from "../../helpers/functions";
 import { create } from "@mui/material/styles/createTransitions";
@@ -24,7 +25,7 @@ export const registerUser = createAsyncThunk(
     //   password: user.password,
     //   password_confirm: user.password_confirm,
     // });
-    await axios.post("http://localhost:8000/users", fakeUser);
+    await axios.post(USERS_API, fakeUser);
     dispatch(getAllUsers());
   }
 );
@@ -34,18 +35,18 @@ export const deleteUser = createAsyncThunk(
   async (id, { dispatch }) => {
     const { data } = await axios.get("http://localhost:8000/users");
     const res = data.filter((item) => item.id !== id);
-    await axios.patch("http://localhost:8000/users", res);
+    await axios.patch(USERS_API, res);
     dispatch(getAllUsers());
   }
 );
 
 export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
-  const { data } = await axios.get("http://localhost:8000/users");
+  const { data } = await axios.get(USERS_API);
   return data;
 });
 
 export const getOneUser = createAsyncThunk("users/getOneUser", async () => {
-  const { data } = await axios.get("http://localhost:8000/users");
+  const { data } = await axios.get(USERS_API);
   const email = getEmail();
   const res = data.find((item) => item.email === email);
   return res;
@@ -107,5 +108,13 @@ export const checkToken = createAsyncThunk(
 
     const { data } = await axios.get(CHECK_TOKEN_API, config);
     return data;
+  }
+);
+
+export const getOneChatUser = createAsyncThunk(
+  "users/getOneChatUser",
+  async (id) => {
+    const data = await axios.get(`${USERS_API}/${id}`);
+    return data.data;
   }
 );

@@ -11,6 +11,8 @@ import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
 import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import Cart from "../components/cart/Cart";
+import ChatPage from "../pages/ChatPage";
+import ChatPeople from "../chat/chatFront/ChatPeople";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -68,6 +70,16 @@ const MainRoutes = () => {
       id: 13,
       path: "/cart",
       element: <Cart />,
+    },
+    {
+      id: 14,
+      path: "/chat",
+      element: <ChatPage />,
+    },
+    {
+      id: 15,
+      path: "/chat/:id",
+      element: <ChatPeople />,
     },
   ];
   return (
