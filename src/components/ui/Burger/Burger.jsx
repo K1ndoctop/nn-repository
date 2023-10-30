@@ -4,7 +4,7 @@ import { AiFillHome } from "react-icons/ai";
 import { FaRegistered } from "react-icons/fa";
 import { BiLogIn, BiLogOut } from "react-icons/bi";
 import { FaListCheck } from "react-icons/fa6";
-import { BsFillFilePersonFill } from "react-icons/bs";
+import { BsFillFilePersonFill, BsFillChatDotsFill } from "react-icons/bs";
 import { IoMdAddCircle } from "react-icons/io";
 import { useNavigate } from "react-router";
 import { checkLogin, logout } from "../../../helpers/functions";
@@ -55,6 +55,9 @@ const Burger = () => {
           </div>
           <div className="cursor-pointer" onClick={() => navigate("/profile")}>
             <BsFillFilePersonFill className="w-10 h-10 my-2" />
+          </div>
+          <div className="cursor-pointer" onClick={() => navigate("/chat")}>
+            <BsFillChatDotsFill className="w-10 h-10 my-2" />
           </div>
           <div
             className="cursor-pointer"
