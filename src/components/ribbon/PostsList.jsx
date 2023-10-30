@@ -27,7 +27,7 @@ const PostsList = () => {
 
   return (
     // <div className="flex flex-col ml-80 w-1/2">
-    <div className="flex flex-col m-auto w-1/2">
+    <div className="flex flex-col m-auto">
       {/* <div className="flex text-center justify-center mt-4"> */}
       <div className="flex text-center justify-center mt-4 max-md:flex-col items-center">
         <button
