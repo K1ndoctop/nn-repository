@@ -35,13 +35,11 @@ export const updateToken = () => {
 
     try {
       const res = await axios.post(TOKEN_FERFESH, requestData, config);
-      console.log(res);
       addToken({ access: res.data.access, refresh: token.refresh });
-      console.log(Authorization);
     } catch (error) {
       console.error("Error refreshing token:", error);
     }
-  }, 1000 * 5 * 1);
+  }, 1000 * 60 * 5);
 };
 
 export const logout = () => {

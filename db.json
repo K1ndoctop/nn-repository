@@ -1,13 +1,125 @@
 {
+  "comments": [
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "кукакумукмкумку",
+      "userId": 1,
+      "likes": [],
+      "color": "pink",
+      "id": 1
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "в3в23",
+      "userId": 1,
+      "likes": [],
+      "color": "pink",
+      "id": 2
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "ув3в3в",
+      "userId": 1,
+      "likes": [],
+      "color": "yellow",
+      "id": 3
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "d23d32d3",
+      "userId": 1,
+      "likes": [],
+      "color": "pink",
+      "id": 4
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "d23d32d",
+      "userId": 1,
+      "likes": [],
+      "color": "green",
+      "id": 5
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "jjbkn",
+      "userId": 1,
+      "likes": [],
+      "color": "purple",
+      "id": 6
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "bibkj",
+      "userId": 1,
+      "likes": [],
+      "color": "green",
+      "id": 7
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "jkj bkjbuibu9vy8voipuoipnmo[p,][j]op[iogpuiyutyrr",
+      "userId": 1,
+      "likes": [],
+      "color": "orange",
+      "id": 8
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "j hkblkn;lm',.'kp;johiguyftdrsew",
+      "userId": 1,
+      "likes": [],
+      "color": "green",
+      "id": 9
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": " kkml;",
+      "userId": 1,
+      "likes": [],
+      "color": "blue",
+      "id": 10
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "34r43",
+      "userId": 1,
+      "likes": [],
+      "color": "purple",
+      "id": 11
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "r43ij2'okt1b",
+      "userId": 1,
+      "likes": [],
+      "color": "pink",
+      "id": 12
+    }
+  ],
   "users": [
     {
       "is_admin": true,
       "first_name": "sulaiman",
       "last_name": "Sagynaliev",
       "email": "azo@gmail.com",
-      "password": "azo2004",
-      "password_confirm": "azo2004",
-      "groups": [],
+      "password": "2004",
+      "password_confirm": "2004",
+      "groups": [
+        "JS-35"
+      ],
       "tasks": [],
       "points": 0,
       "coins": 0,
@@ -21,7 +133,9 @@
       "email": "1",
       "password": "123456",
       "password_confirm": "123456",
-      "groups": [],
+      "groups": [
+        "JS-35"
+      ],
       "tasks": [],
       "points": 0,
       "coins": 0,

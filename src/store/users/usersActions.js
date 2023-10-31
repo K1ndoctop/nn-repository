@@ -50,9 +50,10 @@ export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
   return data;
 });
 
-export const getOneUser = createAsyncThunk("users/getOneUser", async (id) => {
+export const getOneUser = createAsyncThunk("users/getOneUser", async () => {
+  const email = getEmail()
   const { data } = await axios.get(`http://localhost:8000/users`);
-  const res = data.find((item) => item.id === id);
+  const res = data.find((item) => item.email === email);
   return res;
 });
 

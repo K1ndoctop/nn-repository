@@ -12,6 +12,7 @@ import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import Basket from "../components/basket/Basket";
 import ResetPassword from "../components/auth/ResetPassword";
+import VotingPage from "../pages/ProfilePage/VotingPage";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -66,14 +67,19 @@ const MainRoutes = () => {
       element: <ProfilePage />,
     },
     {
-      id: 12,
+      id: 13,
       path: "/basket",
       element: <Basket />,
     },
     {
-      id: 12,
+      id: 14,
       path: "/reset",
       element: <ResetPassword />,
+    },
+    {
+      id: 15,
+      path: "/voting",
+      element: <VotingPage />,
     }
   ];
   return (
