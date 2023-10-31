@@ -9,7 +9,6 @@ import {
   USERS_API,
 } from "../../helpers/consts";
 import { addEmail, addToken, getToken } from "../../helpers/functions";
-import { create } from "@mui/material/styles/createTransitions";
 import { getEmail } from "../../helpers/functions";
 
 export const registerUser = createAsyncThunk(

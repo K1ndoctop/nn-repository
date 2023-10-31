@@ -12,30 +12,30 @@ const ChatPeople = () => {
   const { search } = useLocation();
 
   const [params, setParams] = useState(null);
-  // const navigate = useNavigate();
-  // const dispatch = useDispatch();
-  // const { id } = useParams();
-  // const { oneChat, users } = useSelector((state) => state.users);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { id } = useParams();
+  const { oneChat, users } = useSelector((state) => state.users);
+
+  useEffect(() => {
+    dispatch(getOneChatUser(id));
+    dispatch(getAllUsers());
+  }, []);
 
   // useEffect(() => {
-  //   dispatch(getOneChatUser(id));
-  //   dispatch(getAllUsers());
+  //   const searchParams = Object.fromEntries(new URLSearchParams(search));
+  //   setParams(searchParams);
+  //   socket.emit("join", searchParams);
+  // }, [search]);
+
+  // useEffect(() => {
+  //   socket.io("message", ({ data }) => {
+  //     console.log(data);
+  //   });
   // }, []);
-
-  useEffect(() => {
-    const searchParams = Object.fromEntries(new URLSearchParams(search));
-    setParams(searchParams);
-    socket.emit("join", searchParams);
-  }, [search]);
-
-  useEffect(() => {
-    socket.io("message", ({ data }) => {
-      console.log(data);
-    });
-  }, []);
   return (
     <>
-      {/* <Burger />
+      <Burger />
       <div className="w-3/4 h-screen relative">
         <div className="bg-slate-700 w-full h-4/5 flex absolute top-16 left-72 rounded-lg">
           <div className="w-1/5 border-r border-red-500">
@@ -65,7 +65,7 @@ const ChatPeople = () => {
             </div>
           )}
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

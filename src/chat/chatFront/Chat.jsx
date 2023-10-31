@@ -4,57 +4,32 @@ import { getAllUsers, getOneChatUser } from "../../store/users/usersActions";
 import { Link, useNavigate } from "react-router-dom";
 import { addUserChat } from "../../store/chat/chatAction";
 
-const FIELD = {
-  NAME: "username",
-  ROOM: "room",
-};
+// const FIELD = {
+//   NAME: "username",
+//   ROOM: "room",
+// };
 
 const Chat = () => {
   const { users } = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { NAME, ROOM } = FIELD;
-  const [values, setValues] = useState({ [NAME]: "", [ROOM]: "" });
+  // const { NAME, ROOM } = FIELD;
+  // const [values, setValues] = useState({ [NAME]: "", [ROOM]: "" });
 
-  const handleChange = (event) => {
-    const { value, name } = event.target;
-    setValues({ ...values, [name]: value });
-  };
+  // const handleChange = (event) => {
+  //   const { value, name } = event.target;
+  //   setValues({ ...values, [name]: value });
+  // };
 
-  const handleClick = (e) => {
-    const isDisabled = Object.values(values).some((value) => !value);
-    if (isDisabled) e.preventDefault();
-  };
+  // const handleClick = (e) => {
+  //   const isDisabled = Object.values(values).some((value) => !value);
+  //   if (isDisabled) e.preventDefault();
+  // };
 
-  console.log(values);
   return (
     <div className="h-screen w-1/2 m-auto pt-12">
-      <input
-        type="text"
-        name={ROOM}
-        placeholder="room"
-        value={values[ROOM]}
-        onChange={handleChange}
-        required
-      />
-      <input
-        type="text"
-        name={NAME}
-        placeholder="name"
-        value={values[NAME]}
-        onChange={handleChange}
-        required
-      />
-      <Link
-        to={`/chat?name=${values[NAME]}&room=${values[ROOM]}`}
-        onClick={() => handleClick()}
-      >
-        <button type="submit" className="bg-blue-500">
-          Войти
-        </button>
-      </Link>
-      {/* <div className="flex justify-center"> */}
-      {/* <button
+      <div className="flex justify-center">
+        <button
           variant="contained"
           className=" border-blue-500 border-2  text-black w-60 h-12 rounded-xl hover:bg-blue-500 hover:text-white hover:duration-700 mr-1"
         >
@@ -71,8 +46,8 @@ const Chat = () => {
           className=" border-blue-500 border-2  text-black w-60 h-12 rounded-xl hover:bg-blue-500 hover:text-white hover:duration-700 mr-1"
         >
           {users.groups}
-        </button> */}
-      {/* <input type="name" />
+        </button>
+        <input type="name" />
         <input type="room" />
       </div>
       {users &&
@@ -91,7 +66,7 @@ const Chat = () => {
             </h3>
             <p>{user.groups}</p>
           </div>
-        ))} */}
+        ))}
     </div>
   );
 };
