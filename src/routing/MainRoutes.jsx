@@ -13,6 +13,10 @@ import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import Cart from "../components/cart/Cart";
 import ChatPage from "../pages/ChatPage";
 import ChatPeople from "../chat/chatFront/ChatPeople";
+import GroupPage from "../pages/GroupPage/GroupPage";
+import Rating from "../components/groups/rating/Rating";
+import Voting from "../components/groups/voting/Voting";
+import CreateVoting from "../components/groups/voting/CreateVoting/CreateVoting";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -80,6 +84,26 @@ const MainRoutes = () => {
       id: 15,
       path: "/chat/:id",
       element: <ChatPeople />,
+    },
+    {
+      id: 16,
+      path: "/groups",
+      element: <GroupPage />,
+    },
+    {
+      id: 17,
+      path: "/rating",
+      element: <Rating />,
+    },
+    {
+      id: 18,
+      path: "/voting",
+      element: <Voting />,
+    },
+    {
+      id: 19,
+      path: "/createVoting",
+      element: <CreateVoting />,
     },
   ];
   return (

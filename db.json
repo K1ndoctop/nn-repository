@@ -8,7 +8,7 @@
       "email": "sulaimanmind862@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": "JS-32",
+      "groups": "JS-35",
       "tasks": {
         "board_1": [],
         "board_2": []
@@ -17,6 +17,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
+      "KPI": 100,
       "id": 1
     },
     {
@@ -35,6 +36,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
+      "KPI": 120,
       "id": 2
     },
     {
@@ -62,6 +64,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
+      "KPI": 60,
       "id": 3
     },
     {
@@ -89,6 +92,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
+      "KPI": 70,
       "id": 4
     },
     {
@@ -108,6 +112,23 @@
       "payedMonths": 1,
       "chat": [],
       "id": 5
+    },
+    {
+      "is_admin": false,
+      "first_name": "1",
+      "last_name": "1",
+      "email": "1@gmail.com",
+      "password": "123456",
+      "password_confirm": "123456",
+      "groups": [],
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "id": 6
     }
   ],
   "tasks": [
@@ -118,6 +139,24 @@
       "description": "fesfef",
       "isDone": false,
       "isChecked": false,
+      "id": 1
+    },
+    {
+      "name": "test",
+      "group": "",
+      "points": "15",
+      "description": "asfnkqwnfkqwnfl",
+      "isDone": false,
+      "isChecked": false,
+      "id": 2
+    }
+  ],
+  "votings": [
+    {
+      "name": "",
+      "week": "",
+      "type": "",
+      "descr": "",
       "id": 1
     }
   ]

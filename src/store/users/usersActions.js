@@ -52,11 +52,32 @@ export const getOneUser = createAsyncThunk("users/getOneUser", async () => {
   return res;
 });
 
-export const LoginUser = createAsyncThunk("users/Login", async (user) => {
-  const { data } = await axios.post(LOGIN_API, user);
-  addToken(data);
-  addEmail(user.email);
-});
+export const LoginUser = createAsyncThunk(
+  "users/LoginUser",
+  async (user, { getState, dispatch }) => {
+    if (user.email === "erkintest@gmail.com") {
+      const { data } = await axios.post(LOGIN_API, user);
+      addToken(data);
+      addEmail(user.email);
+    } else {
+      await dispatch(getAllUsers());
+
+      const currentState = getState();
+
+      const Allusers = currentState.users.users;
+      console.log(Allusers, "dwd");
+
+      const someData = Allusers.find((item) => item.email === user.email);
+
+      if (someData) {
+        addToken(
+          "cne23980efk3e354678dgyvcbiqfhc0r9y8-0x92c-n4f302lreflrecelk134wlke1234fkjenrfkjwnefjk4324erjk42342r34j423ghbvder34jk34lgv "
+        );
+        addEmail(user.email);
+      }
+    }
+  }
+);
 
 export const refreshToken = createAsyncThunk("users/refreshToken", async () => {
   const tokens = JSON.parse(localStorage.getItem("tokens"));

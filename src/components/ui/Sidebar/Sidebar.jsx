@@ -7,6 +7,7 @@ import { BsFillFilePersonFill, BsFillChatDotsFill } from "react-icons/bs";
 import { IoMdAddCircle } from "react-icons/io";
 import { useNavigate } from "react-router";
 import { checkLogin, logout } from "../../../helpers/functions";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -79,6 +80,13 @@ const Sidebar = () => {
       >
         Оплатита за курс
       </button>
+      <NavLink
+        onClick={() => {
+          navigate("/groups");
+        }}
+      >
+        Группы
+      </NavLink>
       {/* <NavLink
         to="/"
         className="text-xl w-28  bg-gray-500 rounded-md text-center"
