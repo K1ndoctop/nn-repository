@@ -3,10 +3,11 @@ import { AiFillHome } from "react-icons/ai";
 import { FaRegistered } from "react-icons/fa";
 import { BiLogOut, BiSolidLogInCircle } from "react-icons/bi";
 import { FaListCheck } from "react-icons/fa6";
-import { BsFillFilePersonFill } from "react-icons/bs";
+import { BsFillFilePersonFill, BsFillChatDotsFill } from "react-icons/bs";
 import { IoMdAddCircle } from "react-icons/io";
 import { useNavigate } from "react-router";
 import { checkLogin, logout } from "../../../helpers/functions";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -47,6 +48,13 @@ const Sidebar = () => {
       </div>
       <div
         className="flex bg-black hover:bg-green-500 m-2 rounded-md p-2 cursor-pointer"
+        onClick={() => navigate("/chat")}
+      >
+        <BsFillChatDotsFill className="w-7 h-7 mr-2" />
+        <h3 className="text-lg font-normal">Чат</h3>
+      </div>
+      <div
+        className="flex bg-black hover:bg-green-500 m-2 rounded-md p-2 cursor-pointer"
         onClick={() => navigate("/create-post")}
       >
         <IoMdAddCircle className="w-7 h-7 mr-2" />
@@ -64,6 +72,21 @@ const Sidebar = () => {
           <h3 className="text-lg font-normal">Выйти</h3>
         </div>
       )}
+      <button
+        onClick={() => {
+          navigate("/cart");
+        }}
+        style={{ backgroundColor: "#ffac04" }}
+      >
+        Оплатита за курс
+      </button>
+      <NavLink
+        onClick={() => {
+          navigate("/groups");
+        }}
+      >
+        Группы
+      </NavLink>
       {/* <NavLink
         to="/"
         className="text-xl w-28  bg-gray-500 rounded-md text-center"

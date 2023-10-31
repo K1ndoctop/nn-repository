@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { TOKEN_FERFESH } from "./consts";
 export const getTotalPages = async (url) => {
   const { data } = await axios.get(url);

@@ -3,8 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { createTask, getCategories } from "../../../store/tasks/tasksActions";
 import styles from "../../ribbon/post.module.css";
+import { getAllUsers, setAllUsers } from "../../../store/users/usersActions";
 
 const TasksCreate = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { categories } = useSelector((state) => state.tasks);
 
   const [task, setTask] = useState({
@@ -16,11 +19,9 @@ const TasksCreate = () => {
     isChecked: false,
   });
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getCategories());
+    dispatch(getAllUsers());
   }, []);
 
   return (
@@ -61,8 +62,11 @@ const TasksCreate = () => {
                 onChange={(e) => setTask({ ...task, group: e.target.value })}
               >
                 <option disabled>Choose group</option>
+                <option>JS-35</option>
                 {categories.map((category) => (
-                  <option value={category}>{category}</option>
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
                 ))}
               </select>
 
@@ -70,6 +74,7 @@ const TasksCreate = () => {
                 className="m-2 p-2 border rounded-lg bg-blue-400 hover:bg-blue-500"
                 onClick={() => {
                   dispatch(createTask({ task }));
+
                   navigate("/tasks");
                 }}
               >

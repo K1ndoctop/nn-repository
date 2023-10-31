@@ -13,14 +13,6 @@ export const getPosts = createAsyncThunk(
   }
 );
 
-// export const getOnePost = createAsyncThunk(
-//   "products/getOnePost",
-//   async ({ id }) => {
-//     const { data } = await axios.get(`${POSTS_API}/products/${id}/`);
-//     return data;
-//   }
-// );
-
 export const getOnePost = createAsyncThunk(
   "posts/getOnePost",
   async (id, { rejectWithValue }) => {
@@ -101,3 +93,36 @@ export const deletePosts = createAsyncThunk(
     dispatch(getPosts());
   }
 );
+
+// export const totalPagePosts = createAsyncThunk(
+//   "posts/totalPagePosts",
+//   async () => {
+//     let product = null;
+//     let totalPage = 1;
+//     do {
+//       product = await axios.get(`${POSTS_API}/products/?page=${totalPage}`);
+//       totalPage++;
+//     } while (product);
+//     return totalPage;
+//   }
+// );
+// export const totalPagePosts = createAsyncThunk(
+//   "products/getTotalPages",
+//   async () => {
+//     let products = null;
+//     let totalPage = 1;
+//     while (true) {
+//       const { data } = await axios.get(
+//         `${POSTS_API}/products/?page=${totalPage}`
+//       );
+//       products = data.results;
+//       if (!products) {
+//         console.log("end");
+//         return totalPage - 1;
+//       }
+//       totalPage++;
+//       console.log(products);
+//       console.log(totalPage);
+//     }
+//   }
+// );

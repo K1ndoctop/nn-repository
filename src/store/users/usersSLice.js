@@ -1,13 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { findUser, getAllUsers, getOneUser, getUser } from "./usersActions";
+import { getAllUsers, getOneUser, getUser } from "./usersActions";
 
 const usersSlice = createSlice({
   name: "users",
   initialState: {
-    users: "",
+    users: [],
     loading: false,
     error: "",
     oneUser: "",
+    oneChat: null,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -33,7 +34,6 @@ const usersSlice = createSlice({
           state.oneUser = action.payload
           state.loading = false
         })
-
 }
 });
 

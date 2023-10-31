@@ -6,6 +6,7 @@ import {
   CHECK_TOKEN_API,
   PROFILE_API,
   TOKEN_FERFESH,
+  USERS_API,
 } from "../../helpers/consts";
 import {
   addEmail,
@@ -14,6 +15,8 @@ import {
   getToken,
 } from "../../helpers/functions";
 import { create } from "@mui/material/styles/createTransitions";
+import { addEmail, addToken, getToken } from "../../helpers/functions";
+import { getEmail } from "../../helpers/functions";
 
 export const registerUser = createAsyncThunk(
   "users/registerUser",
@@ -40,13 +43,13 @@ export const deleteUser = createAsyncThunk(
   async (id, { dispatch }) => {
     const { data } = await axios.get("http://localhost:8000/users");
     const res = data.filter((item) => item.id !== id);
-    await axios.patch("http://localhost:8000/users", res);
+    await axios.patch(USERS_API, res);
     dispatch(getAllUsers());
   }
 );
 
 export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
-  const { data } = await axios.get("http://localhost:8000/users");
+  const { data } = await axios.get(USERS_API);
   return data;
 });
 
