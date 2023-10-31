@@ -37,6 +37,7 @@ const Register = () => {
           points: 0,
           coins: 0,
           payedMonths: 1,
+          chat: [],
         })
       );
       setFirst_name("");

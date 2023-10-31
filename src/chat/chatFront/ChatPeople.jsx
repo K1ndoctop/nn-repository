@@ -1,19 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Burger from "../../components/ui/Burger/Burger";
 import Chat from "./Chat";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getOneChatUser } from "../../store/users/usersActions";
+import { getAllUsers, getOneChatUser } from "../../store/users/usersActions";
+import { addUserChat } from "../../store/chat/chatAction";
+import io from "socket.io-client";
 
+const socket = io.connect("http://localhost:5000");
 const ChatPeople = () => {
+  const { search } = useLocation();
+
+  const [params, setParams] = useState(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
   const { oneChat, users } = useSelector((state) => state.users);
 
-  //   useEffect(() => {
-  //     dispatch(getOneChatUser(id));
-  //   }, []);
+  useEffect(() => {
+    dispatch(getOneChatUser(id));
+    dispatch(getAllUsers());
+  }, []);
+
+  // useEffect(() => {
+  //   const searchParams = Object.fromEntries(new URLSearchParams(search));
+  //   setParams(searchParams);
+  //   socket.emit("join", searchParams);
+  // }, [search]);
+
+  // useEffect(() => {
+  //   socket.io("message", ({ data }) => {
+  //     console.log(data);
+  //   });
+  // }, []);
   return (
     <>
       <Burger />
@@ -26,6 +45,7 @@ const ChatPeople = () => {
                   key={user.id}
                   onClick={() => {
                     dispatch(getOneChatUser(user.id));
+                    dispatch(addUserChat(user));
                     navigate(`/chat/${user.id}`);
                   }}
                   className="m-4 border-blue-500 border-2 hover:bg-blue-500 hover:text-white hover:duration-700 rounded-xl p-2"

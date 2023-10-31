@@ -5,10 +5,10 @@ const cors = require("cors");
 const app = express();
 
 const route = require("./route");
-app.use(route);
 
 app.use(cors({ origin: "*" }));
 app.use(route);
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(9999, (err) => {
+server.listen(5000, (err) => {
   if (err) {
     throw Error(err);
   }
