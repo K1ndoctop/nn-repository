@@ -32,7 +32,7 @@ export const registerUser = createAsyncThunk(
 export const deleteUser = createAsyncThunk(
   "users/deleteUser",
   async (id, { dispatch }) => {
-    const { data } = await axios.get("http://localhost:8000/users");
+    const { data } = await axios.get(USERS_API);
     const res = data.filter((item) => item.id !== id);
     await axios.patch(USERS_API, res);
     dispatch(getAllUsers());
@@ -51,10 +51,20 @@ export const getOneUser = createAsyncThunk("users/getOneUser", async () => {
   return res;
 });
 
+export const getIsAdmin = createAsyncThunk("users/getIsAdmin", async () => {
+  const { data } = await axios.get(USERS_API);
+  const email = getEmail();
+  const res = data.find((item) => item.email === email);
+  return res.is_admin;
+});
+
 export const LoginUser = createAsyncThunk(
   "users/LoginUser",
   async (user, { getState, dispatch }) => {
-    if (user.email === "erkintest@gmail.com") {
+    if (
+      user.email === "erkintest@gmail.com" ||
+      user.email === "malikvundiz@gmail.com"
+    ) {
       const { data } = await axios.post(LOGIN_API, user);
       addToken(data);
       addEmail(user.email);

@@ -7,11 +7,11 @@ import { getAllUsers, getOneChatUser } from "../../store/users/usersActions";
 import { addUserChat } from "../../store/chat/chatAction";
 import io from "socket.io-client";
 
-const socket = io.connect("http://localhost:5000");
+// const socket = io.connect("http://localhost:5000");
 const ChatPeople = () => {
   const { search } = useLocation();
 
-  const [params, setParams] = useState(null);
+  // const [params, setParams] = useState(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();

@@ -68,7 +68,7 @@
       "id": 3
     },
     {
-      "is_admin": false,
+      "is_admin": true,
       "first_name": "malik",
       "last_name": "vundiza",
       "email": "malikvundiz@gmail.com",

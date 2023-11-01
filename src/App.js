@@ -3,7 +3,7 @@ import MainRoutes from "./routing/MainRoutes";
 import { checkLogin, updateToken } from "./helpers/functions";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { getOneUser } from "./store/users/usersActions";
+import { getIsAdmin, getOneUser } from "./store/users/usersActions";
 
 const App = () => {
   const navigate = useNavigate();
@@ -12,6 +12,7 @@ const App = () => {
   useEffect(() => {
     updateToken();
     dispatch(getOneUser());
+    dispatch(getIsAdmin());
   }, []);
   useEffect(() => {
     checkLogin();
