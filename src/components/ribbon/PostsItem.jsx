@@ -14,7 +14,7 @@ const PostsItem = ({ post }) => {
   const { id } = useParams();
 
   return (
-    <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg w-1/2 mt-5 m-auto">
+    <article class="overflow-hidden rounded-lg shadow transition hover:shadow-lg w-1/2 mt-5 m-auto flex flex-col">
       <img alt="Office" src={post.image} class="h-96 w-full object-cover" />
 
       <div class="bg-white p-4 sm:p-6">
@@ -30,7 +30,7 @@ const PostsItem = ({ post }) => {
           {post.description}
         </p>
         <button
-          class="inline-block rounded border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500 m-3"
+          class="inline-block rounded-full border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500 m-3"
           onClick={() => {
             navigate(`/edit-post/${post.id}`);
           }}
@@ -38,41 +38,13 @@ const PostsItem = ({ post }) => {
           Изменить
         </button>
         <button
-          class="inline-block rounded border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
+          class="inline-block rounded-full border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
           onClick={() => dispatch(deletePosts({ id: post.id }))}
         >
           Удалить
         </button>
       </div>
     </article>
-    // <Card sx={{ maxWidth: "100%", margin: 2 }}>
-    //   <CardActionArea>
-    //     <CardMedia
-    //       component="img"
-    //       height="140"
-    //       image={post.image}
-    //       alt={post.name}
-    //     />
-    //     <CardContent>
-    //       <Typography gutterBottom variant="h5" component="div">
-    //         {post.name}
-    //       </Typography>
-    //       <Typography variant="body2" color="text.secondary">
-    //         {post.description}
-    //       </Typography>
-    //     </CardContent>
-    //     <Button
-    //       onClick={() => {
-    //         navigate(`/edit-post/${post.id}`);
-    //       }}
-    //     >
-    //       Edit
-    //     </Button>
-    //     <Button onClick={() => dispatch(deletePosts({ id: post.id }))}>
-    //       Delete
-    //     </Button>
-    //   </CardActionArea>
-    // </Card>
   );
 };
 

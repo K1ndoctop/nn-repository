@@ -21,7 +21,7 @@ const Burger = () => {
     setIsMenuOpen(false);
   }
   return (
-    <div className="fixed z-20 bg-[#000000a0] h-full p-5 text-stone-200">
+    <div className=" z-20  h-full p-5 text-stone-200">
       <button className="burgerBtn" onClick={toggleMenu}>
         {isMenuOpen ? (
           <div className="burger--square__close cursor-pointer">
@@ -29,53 +29,13 @@ const Burger = () => {
           </div>
         ) : (
           <div className="burger--square__open flex cursor-pointer">
-            <p className=" font-bold ml-2 mb-3 text-3xl">&#9776;</p>
+            <p className=" font-bold text-3xl">&#9776;</p>
           </div>
         )}
       </button>
       {isMenuOpen && (
         <div>
-          <Sidebar closeBurgerMenu={closeBurgerMenu} />
-          <div className="overlay" onClick={closeBurgerMenu}></div>
-        </div>
-      )}
-      {!isMenuOpen && (
-        <div className="flex flex-col h-1/4 justify-between">
-          {/* <div onClick={() => navigate("/")}>
-          <AiFillHome className="w-10 h-10 my-2" />
-        </div> */}
-          {/* <div onClick={() => navigate("/login")}>
-            <BiLogIn className="w-10 h-10 my-2" />
-          </div> */}
-          <div className="cursor-pointer" onClick={() => navigate("/home")}>
-            <AiFillHome className="w-10 h-10 my-2" />
-          </div>
-          <div className="cursor-pointer" onClick={() => navigate("/tasks")}>
-            <FaListCheck className="w-10 h-10 my-2" />
-          </div>
-          <div className="cursor-pointer" onClick={() => navigate("/profile")}>
-            <BsFillFilePersonFill className="w-10 h-10 my-2" />
-          </div>
-          <div className="cursor-pointer" onClick={() => navigate("/chat")}>
-            <BsFillChatDotsFill className="w-10 h-10 my-2" />
-          </div>
-          <div
-            className="cursor-pointer"
-            onClick={() => navigate("/create-post")}
-          >
-            <IoMdAddCircle className="w-10 h-10 my-2" />
-          </div>
-          {checkLogin() && (
-            <div
-              className="cursor-pointer"
-              onClick={() => {
-                logout();
-                navigate("/");
-              }}
-            >
-              <BiLogOut className="w-10 h-10 my-2" />
-            </div>
-          )}
+          
         </div>
       )}
     </div>
