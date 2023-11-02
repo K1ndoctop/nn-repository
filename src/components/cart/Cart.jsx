@@ -5,7 +5,7 @@ import { getAllUsers, getOneUser } from "../../store/users/usersActions";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { oneUser } = useSelector((state) => state.users);
   const [user, setUser] = useState("");
@@ -41,7 +41,7 @@ const Cart = () => {
     return 16000 * month;
   };
   return (
-    <section className=" max-h-screen">
+    <section className="h-screen p-32">
       <div className="mx-auto h-full max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <header className="text-center">
@@ -53,12 +53,10 @@ const Cart = () => {
           <div className="mt-8">
             <ul className="space-y-4">
               <li className="flex items-center gap-4">
-
                 <div>
                   <h3 className="text-sm text-gray-900">{user.groups}</h3>
 
-                  <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
-                  </dl>
+                  <dl className="mt-0.5 space-y-px text-[10px] text-gray-600"></dl>
                 </div>
 
                 <div className="flex flex-1 items-center justify-end gap-2">
@@ -104,7 +102,6 @@ const Cart = () => {
             <div className="mt-8 flex justify-end border-t border-gray-100 pt-8">
               <div className="w-screen max-w-lg space-y-4">
                 <dl className="space-y-0.5 text-sm text-gray-700">
-
                   <div className="flex justify-between !text-base font-medium">
                     <dt>Total</dt>
                     <dd>{calcPrice()}сом</dd>
@@ -113,7 +110,7 @@ const Cart = () => {
 
                 <div className="flex justify-end">
                   <button
-                    onClick={() => navigate('/home')}
+                    onClick={() => navigate("/home")}
                     className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
                   >
                     Checkout

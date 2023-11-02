@@ -27,7 +27,7 @@ const Chat = () => {
   // };
 
   return (
-    <div className="h-screen w-1/2 m-auto pt-12">
+    <div className="h-screen w-1/2 m-auto pt-20">
       <div className="flex justify-center">
         <button
           variant="contained"

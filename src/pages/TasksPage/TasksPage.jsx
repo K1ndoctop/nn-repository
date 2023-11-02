@@ -10,7 +10,7 @@ import Sidebar from "../../components/ui/Sidebar/Sidebar";
 const TasksPage = () => {
   const navigate = useNavigate();
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100%" }}>
       <Sidebar />
       <div
         style={{

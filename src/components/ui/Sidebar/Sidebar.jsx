@@ -12,6 +12,7 @@ import Burger from "../Burger/Burger";
 import { useDispatch } from "react-redux";
 import { getOneUser } from "../../../store/users/usersActions";
 import { useSelector } from "react-redux";
+import { clearAdmin } from "../../../store/users/usersSLice";
 
 const Sidebar = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Sidebar = () => {
   }, []);
 
   return (
-    <div className="text-stone-200 flex bg-black/75 justify-between items-center fixed w-full p-1">
+    <div className="text-stone-200 flex bg-black/75 justify-between items-center fixed w-full p-1 z-50">
       <img
         className="m-4"
         src="https://makers.kg/assets/logo_light-86cc27ce.svg"
@@ -69,7 +70,15 @@ const Sidebar = () => {
               navigate("/");
             }}
           >
-            <h3 className="text-lg font-normal">Выйти</h3>
+            <h3
+              onClick={() => {
+                dispatch(clearAdmin());
+                logout();
+              }}
+              className="text-lg font-normal"
+            >
+              Выйти
+            </h3>
           </div>
         )}
         <div

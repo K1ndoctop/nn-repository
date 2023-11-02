@@ -10,7 +10,16 @@
       "password_confirm": "123",
       "groups": "JS-35",
       "tasks": {
-        "board_1": [],
+        "board_1": [
+          {
+            "name": "ewfewfwef",
+            "group": "",
+            "points": "56789",
+            "description": "iubuib",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
         "board_2": []
       },
       "points": 0,
@@ -30,7 +39,16 @@
       "password_confirm": "123",
       "groups": "JS-36",
       "tasks": {
-        "board_1": [],
+        "board_1": [
+          {
+            "name": "ewfewfwef",
+            "group": "",
+            "points": "56789",
+            "description": "iubuib",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
         "board_2": []
       },
       "points": 0,
@@ -58,6 +76,14 @@
             "description": "weobewu",
             "isDone": false,
             "isChecked": false
+          },
+          {
+            "name": "ewfewfwef",
+            "group": "",
+            "points": "56789",
+            "description": "iubuib",
+            "isDone": false,
+            "isChecked": false
           }
         ],
         "board_2": []
@@ -71,7 +97,7 @@
       "id": 3
     },
     {
-      "is_admin": false,
+      "is_admin": true,
       "first_name": "Malik",
       "last_name": "Vundiza",
       "email": "malikvundiz@gmail.com",
@@ -79,7 +105,24 @@
       "password_confirm": "0709301103",
       "groups": "JS-35",
       "tasks": {
-        "board_1": [],
+        "board_1": [
+          {
+            "name": "wefeuiwfhbui",
+            "group": "JS-35",
+            "points": "23456",
+            "description": "weobewu",
+            "isDone": false,
+            "isChecked": false
+          },
+          {
+            "name": "ewfewfwef",
+            "group": "",
+            "points": "56789",
+            "description": "iubuib",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
         "board_2": []
       },
       "points": 0,
@@ -99,7 +142,16 @@
       "password_confirm": "123",
       "groups": "JS-35",
       "tasks": {
-        "board_1": [],
+        "board_1": [
+          {
+            "name": "ewfewfwef",
+            "group": "",
+            "points": "56789",
+            "description": "iubuib",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
         "board_2": []
       },
       "points": 0,
@@ -119,7 +171,16 @@
       "password_confirm": "123",
       "groups": "JS-35",
       "tasks": {
-        "board_1": [],
+        "board_1": [
+          {
+            "name": "ewfewfwef",
+            "group": "",
+            "points": "56789",
+            "description": "iubuib",
+            "isDone": false,
+            "isChecked": false
+          }
+        ],
         "board_2": []
       },
       "points": 0,
@@ -286,7 +347,7 @@
       "week": "",
       "type": "",
       "descr": "",
-      "id": 1
+      "id": 4
     }
   ]
 }

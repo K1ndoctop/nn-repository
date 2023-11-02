@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
   getAllUsers,
+  getIsAdmin,
   getOneChatUser,
   getOneUser,
   getUser,
@@ -14,8 +15,13 @@ const usersSlice = createSlice({
     error: "",
     oneUser: "",
     oneChat: null,
+    isAdmin: null,
   },
-  reducers: {},
+  reducers: {
+    clearAdmin: (state) => {
+      state.isAdmin = null;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getUser.pending, (state, action) => {
@@ -50,8 +56,14 @@ const usersSlice = createSlice({
       .addCase(getOneChatUser.rejected, (state) => {
         state.loading = false;
         state.error = "error";
+      })
+      .addCase(getIsAdmin.fulfilled, (state, action) => {
+        state.loading = false;
+        state.isAdmin = action.payload;
+        console.log(state.isAdmin);
       });
   },
 });
 
+export const { clearAdmin } = usersSlice.actions;
 export default usersSlice.reducer;
