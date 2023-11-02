@@ -11,7 +11,7 @@ import io from "socket.io-client";
 const ChatPeople = () => {
   // const { search } = useLocation();  
 
-  const [params, setParams] = useState(null);
+  // const [params, setParams] = useState(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { id } = useParams();
