@@ -9,9 +9,20 @@ import { useNavigate } from "react-router";
 import { checkLogin, logout } from "../../../helpers/functions";
 import { NavLink } from "react-router-dom";
 import Burger from "../Burger/Burger";
+import { useDispatch } from "react-redux";
+import { getOneUser } from "../../../store/users/usersActions";
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { oneUser, loading } = useSelector((state) => state.users);
+
+  useEffect(() => {
+    getOneUser();
+  }, []);
+
   return (
     <div className="text-stone-200 flex bg-black/75 justify-between items-center fixed w-full p-1">
       <img
@@ -69,17 +80,16 @@ const Sidebar = () => {
         >
           <button className="text-lg font-normal">Оплатита за курс</button>
         </div>
-        <NavLink
+        <div
           onClick={() => {
-            navigate("/groups");
+            navigate("/group");
           }}
-          className="text-lg font-normal"
         >
-          Группы
-        </NavLink>
+          {oneUser && oneUser.groups}
+        </div>
       </div>
       <div className="lg:hidden">
-        <Burger/>
+        <Burger />
       </div>
     </div>
   );

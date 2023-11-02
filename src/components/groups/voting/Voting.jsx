@@ -5,13 +5,35 @@ const Voting = () => {
   const navigate = useNavigate();
   return (
     <div>
+      <nav>
+        <a
+          onClick={() => {
+            navigate("/group");
+          }}
+        >
+          Группа
+        </a>
+        <a
+          onClick={() => {
+            navigate("/rating");
+          }}
+        >
+          Рейтинг
+        </a>
+        <a
+          onClick={() => {
+            navigate("/voting");
+          }}
+        >
+          Голосования
+        </a>
+      </nav>
+
       <button
         onClick={() => {
           navigate("/createVoting");
         }}
-      >
-        Новое Голосование
-      </button>
+      ></button>
     </div>
   );
 };

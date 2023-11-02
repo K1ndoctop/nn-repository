@@ -87,7 +87,7 @@ const MainRoutes = () => {
     },
     {
       id: 16,
-      path: "/groups",
+      path: "/group",
       element: <GroupPage />,
     },
     {
