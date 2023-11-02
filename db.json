@@ -3,7 +3,7 @@
   "users": [
     {
       "is_admin": true,
-      "first_name": "sulaiman",
+      "first_name": "Sulaiman",
       "last_name": "Sagynaliev",
       "email": "sulaimanmind862@gmail.com",
       "password": "123",
@@ -17,7 +17,8 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 100,
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/suli35c3d8797a91b2ec.jpg",
       "id": 1
     },
     {
@@ -36,7 +37,8 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 120,
+      "KPI": 0,
+      "image": "",
       "id": 2
     },
     {
@@ -46,7 +48,7 @@
       "email": "admin@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": "JS-35",
+      "groups": "",
       "tasks": {
         "board_1": [
           {
@@ -64,45 +66,38 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 60,
+      "KPI": 0,
+      "image": "",
       "id": 3
     },
     {
       "is_admin": false,
-      "first_name": "malik",
-      "last_name": "vundiza",
+      "first_name": "Malik",
+      "last_name": "Vundiza",
       "email": "malikvundiz@gmail.com",
       "password": "0709301103",
       "password_confirm": "0709301103",
       "groups": "JS-35",
       "tasks": {
-        "board_1": [
-          {
-            "name": "wefeuiwfhbui",
-            "group": "JS-35",
-            "points": "23456",
-            "description": "weobewu",
-            "isDone": false,
-            "isChecked": false
-          }
-        ],
+        "board_1": [],
         "board_2": []
       },
       "points": 0,
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 70,
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/malik2255891b90588218.jpg",
       "id": 4
     },
     {
       "is_admin": false,
-      "first_name": "erkintest",
-      "last_name": "testov",
-      "email": "erkintest@gmail.com",
+      "first_name": "Amantur",
+      "last_name": "Mendibaev",
+      "email": "amantur@gmail.com",
       "password": "123",
       "password_confirm": "123",
-      "groups": "JS-34",
+      "groups": "JS-35",
       "tasks": {
         "board_1": [],
         "board_2": []
@@ -111,16 +106,18 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/aman829b327ed58f6179.jpg",
       "id": 5
     },
     {
       "is_admin": false,
-      "first_name": "1",
-      "last_name": "1",
-      "email": "1@gmail.com",
-      "password": "123456",
-      "password_confirm": "123456",
-      "groups": [],
+      "first_name": "Sabina",
+      "last_name": "Stalbekova",
+      "email": "Sabina@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
       "tasks": {
         "board_1": [],
         "board_2": []
@@ -128,7 +125,130 @@
       "points": 0,
       "coins": 0,
       "payedMonths": 1,
+      "chat": [],
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/sabinab329611b289cdca3.jpg",
       "id": 6
+    },
+    {
+      "is_admin": false,
+      "first_name": "Atay",
+      "last_name": "Amankulov",
+      "email": "Atay@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "chat": [],
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/atayf6c20028eb2c0571.jpg",
+      "id": 7
+    },
+    {
+      "is_admin": false,
+      "first_name": "Argen",
+      "last_name": "Paisbekov",
+      "email": "Argen@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "chat": [],
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/argen.jpg",
+      "id": 8
+    },
+    {
+      "is_admin": false,
+      "first_name": "LikeMyrza",
+      "last_name": "Foooterbekov",
+      "email": "Beka@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "chat": [],
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/footerd3e6a7da50052d74.jpg",
+      "id": 9
+    },
+    {
+      "is_admin": false,
+      "first_name": "Olesya",
+      "last_name": "Kan",
+      "email": "olesya@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "chat": [],
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/kanola639f8fbbceada1c.jpg",
+      "id": 10
+    },
+    {
+      "is_admin": false,
+      "first_name": "Erkin",
+      "last_name": "theGoat",
+      "email": "erkin@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "chat": [],
+      "KPI": 0,
+      "image": "https://m.media-amazon.com/images/I/61FJspbWOlL._AC_UF1000,1000_QL80_.jpg",
+      "id": 11
+    },
+    {
+      "is_admin": false,
+      "first_name": "Tilek",
+      "last_name": "Bolotov",
+      "email": "tilek@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "chat": [],
+      "KPI": 0,
+      "image": "https://ltdfoto.ru/images/2023/11/02/tilek244e643bf360858c.jpg",
+      "id": 12
     }
   ],
   "tasks": [
@@ -149,6 +269,15 @@
       "isDone": false,
       "isChecked": false,
       "id": 2
+    },
+    {
+      "name": "Сделать клон Трелло",
+      "group": "",
+      "points": "100",
+      "description": "Здесь должно быть описание",
+      "isDone": false,
+      "isChecked": false,
+      "id": 3
     }
   ],
   "votings": [

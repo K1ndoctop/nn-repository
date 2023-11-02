@@ -5,7 +5,6 @@ import Burger from "../../components/ui/Burger/Burger";
 const TasksCreatePage = () => {
   return (
     <div>
-      <Burger />
       <TasksCreate />
     </div>
   );
