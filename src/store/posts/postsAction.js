@@ -94,24 +94,6 @@ export const deletePosts = createAsyncThunk(
   }
 );
 
-export const getToggleLikes = createAsyncThunk(
-  "posts/getToggleLikes",
-  async (id, { dispatch }) => {
-    const tokens = JSON.parse(localStorage.getItem("token"));
-    const Authorization = `Bearer ${tokens.access}`;
-    const config = {
-      headers: {
-        Authorization,
-      },
-    };
-    const data = await axios.get(
-      `${POSTS_API}/products/${id}/toggle_like/`,
-      config
-    );
-    dispatch(getPosts());
-  }
-);
-
 // export const totalPagePosts = createAsyncThunk(
 //   "posts/totalPagePosts",
 //   async () => {
