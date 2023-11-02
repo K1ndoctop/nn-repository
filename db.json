@@ -1,27 +1,82 @@
 {
-  "chatUsers": [],
+  "comments": [
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "d2e",
+      "userId": 1,
+      "likes": [],
+      "color": "pink",
+      "id": 1
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "33у3",
+      "userId": 1,
+      "likes": [],
+      "color": "red",
+      "id": 2
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "вуауа3а34",
+      "userId": 1,
+      "likes": [],
+      "color": "yellow",
+      "id": 3
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "у",
+      "userId": 1,
+      "likes": [],
+      "color": "red",
+      "id": 4
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "лтл т",
+      "userId": 1,
+      "likes": [],
+      "color": "blue",
+      "id": 5
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "то сыо ",
+      "userId": 1,
+      "likes": [],
+      "color": "pink",
+      "id": 6
+    },
+    {
+      "first_name": "sulaiman",
+      "last_name": "Sagynaliev",
+      "comment": "ацуа",
+      "userId": 1,
+      "likes": [],
+      "color": "red",
+      "id": 7
+    }
+  ],
   "users": [
     {
       "is_admin": true,
       "first_name": "Sulaiman",
       "last_name": "Sagynaliev",
-      "email": "sulaimanmind862@gmail.com",
-      "password": "123",
-      "password_confirm": "123",
-      "groups": "JS-35",
-      "tasks": {
-        "board_1": [
-          {
-            "name": "ewfewfwef",
-            "group": "",
-            "points": "56789",
-            "description": "iubuib",
-            "isDone": false,
-            "isChecked": false
-          }
-        ],
-        "board_2": []
-      },
+
+      "email": "azo@gmail.com",
+      "password": "2004",
+      "password_confirm": "2004",
+      "groups": [
+        "JS-35"
+      ],
+      "tasks": [],
       "points": 0,
       "coins": 0,
       "payedMonths": 1,
@@ -314,15 +369,6 @@
   ],
   "tasks": [
     {
-      "name": "ssgefsd",
-      "group": "",
-      "points": "3214",
-      "description": "fesfef",
-      "isDone": false,
-      "isChecked": false,
-      "id": 1
-    },
-    {
       "name": "test",
       "group": "",
       "points": "15",
@@ -343,6 +389,7 @@
   ],
   "votings": [
     {
+
       "name": "",
       "week": "",
       "type": "",
@@ -352,3 +399,4 @@
   ],
   "comments": [{}]
 }
+

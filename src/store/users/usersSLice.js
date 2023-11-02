@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import {
   getAllUsers,
   getIsAdmin,
@@ -6,6 +7,7 @@ import {
   getOneUser,
   getUser,
 } from "./usersActions";
+
 
 const usersSlice = createSlice({
   name: "users",
@@ -24,6 +26,7 @@ const usersSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+
       .addCase(getUser.pending, (state, action) => {
         state.loading = true;
       })
@@ -63,6 +66,7 @@ const usersSlice = createSlice({
         console.log(state.isAdmin);
       });
   },
+
 });
 
 export const { clearAdmin } = usersSlice.actions;

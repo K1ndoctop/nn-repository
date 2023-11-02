@@ -8,24 +8,30 @@ import {
   TOKEN_FERFESH,
   USERS_API,
 } from "../../helpers/consts";
-import { addEmail, addToken, getToken } from "../../helpers/functions";
-import { getEmail } from "../../helpers/functions";
+import {
+  addEmail,
+  addToken,
+  getEmail,
+  getToken,
+} from "../../helpers/functions";
 
 export const registerUser = createAsyncThunk(
   "users/registerUser",
   async (user, { dispatch }) => {
     const fakeUser = user;
-    if (user.first_name === "sulaiman" || user.first_name === "Erkinbek") {
+    if (user.email === "sulaimanmind2004@gmail.com") {
       fakeUser.is_admin = true;
+      const { data } = await axios.post(REGISTER_API, {
+        email: user.email,
+        password: user.password,
+        password_confirm: user.password_confirm,
+      });
+      await axios.post("http://localhost:8000/users", fakeUser);
+      dispatch(getAllUsers());
+    } else {
+      await axios.post("http://localhost:8000/users", fakeUser);
+      dispatch(getAllUsers());
     }
-
-    // const { data } = await axios.post(REGISTER_API, {
-    //   email: user.email,
-    //   password: user.password,
-    //   password_confirm: user.password_confirm,
-    // });
-    await axios.post(USERS_API, fakeUser);
-    dispatch(getAllUsers());
   }
 );
 
@@ -45,8 +51,8 @@ export const getAllUsers = createAsyncThunk("users/getAllUsers", async () => {
 });
 
 export const getOneUser = createAsyncThunk("users/getOneUser", async () => {
-  const { data } = await axios.get(USERS_API);
-  const email = getEmail();
+  const email = getEmail()
+  const { data } = await axios.get(`http://localhost:8000/users`);
   const res = data.find((item) => item.email === email);
   return res;
 });
@@ -61,9 +67,11 @@ export const getIsAdmin = createAsyncThunk("users/getIsAdmin", async () => {
 export const LoginUser = createAsyncThunk(
   "users/LoginUser",
   async (user, { getState, dispatch }) => {
+
     if (
       user.email === "erkintest@gmail.com" ||
-      user.email === "malikvundiz@gmail.com"
+      user.email === "malikvundiz@gmail.com" ||
+      user.email === "azo@gmail.com"
     ) {
       const { data } = await axios.post(LOGIN_API, user);
       addToken(data);
@@ -141,12 +149,29 @@ export const checkToken = createAsyncThunk(
   }
 );
 
+export const changePassword = createAsyncThunk(
+  "users/changePassword",
+  async (passwod) => {
+    const { data } = await axios.get(`http://localhost:8000/users`);
+    const email = getEmail();
+    const res = data.find((item) => item.email == email);
+    console.log(email);
+    console.log(data);
+    console.log(res);
+    res.password = passwod;
+    res.password_confirm = passwod;
+    await axios.patch(`http://localhost:8000/users/${res.id}`, res);
+    return res;
+  }
+);
+
 export const getOneChatUser = createAsyncThunk(
   "users/getOneChatUser",
   async (id) => {
     const data = await axios.get(`${USERS_API}/${id}`);
     return data.data;
   }
+
 );
 
 export const updateKPI = createAsyncThunk(
@@ -158,3 +183,4 @@ export const updateKPI = createAsyncThunk(
     dispatch(getAllUsers());
   }
 );
+

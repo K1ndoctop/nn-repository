@@ -38,22 +38,25 @@ const CommentsList = () => {
         userId: oneUser.id,
         likes: [],
         color: randomColor,
-        likes: [],
+
+        likes: []
+
       };
       dispatch(postComment(obj));
     }
     setCom("");
   }
 
+
   return (
     <>
       <div className="flex justify-center mb-4">
         <div className="w-1/2">
-          {!comments ? (
-            <p>no</p>
-          ) : (
-            <h1 className="text-gray-700">{comments.length} - коментариев</h1>
-          )}
+
+        {!comments? (<p>no</p>): (
+            <h1 className="text-gray-700">{comments.length} -  коментариев</h1>
+            )}
+
         </div>
       </div>
       <div className="flex justify-center">

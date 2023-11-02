@@ -48,7 +48,7 @@ const Login = () => {
                 </h2>
 
                 <p className="mt-4 leading-relaxed ">
-                  веедите свой емайл или пароль если вы ранее регистрировались
+                  веедите свой емайл и пароль если вы ранее регистрировались
                 </p>
               </div>
 
@@ -103,6 +103,14 @@ const Login = () => {
                   У вас еще нет аккаунта?
                   <a href="#" className="text-gray-700 underline">
                     <Link to="/">Регистрация</Link>
+
+                  </a>
+                  .
+                </p>
+                <p className="mt-4 text-sm text-gray-500 sm:mt-0">
+                  Забыли Пароль?
+                  <a href="#" className="text-gray-700 underline">
+                    <Link to="/reset">Восстановить</Link>
                   </a>
                   .
                 </p>
