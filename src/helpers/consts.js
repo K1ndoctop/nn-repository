@@ -18,4 +18,6 @@ export const DELETE_USER = "http://34.173.115.25/api/v1/account/delete-user/";
 
 export const CHAT_USERS_API = "http://localhost:8000/chatUsers";
 
+export const VOTINGS_API = "http://localhost:8000/votings";
+
 export const USERS_API = "http://localhost:8000/users";

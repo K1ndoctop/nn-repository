@@ -1,5 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllUsers, getOneUser, getUser } from "./usersActions";
+
+import {
+  getAllUsers,
+  getIsAdmin,
+  getOneChatUser,
+  getOneUser,
+  getUser,
+} from "./usersActions";
+
 
 const usersSlice = createSlice({
   name: "users",
@@ -9,32 +17,57 @@ const usersSlice = createSlice({
     error: "",
     oneUser: "",
     oneChat: null,
+    isAdmin: null,
   },
-  reducers: {},
+  reducers: {
+    clearAdmin: (state) => {
+      state.isAdmin = null;
+    },
+  },
   extraReducers: (builder) => {
     builder
-        .addCase(getUser.pending, (state, action ) => {
-            state.loading = true
-        })
-        .addCase(getUser.fulfilled, (state, action) => {
-            state.oneUser = action.payload
-            state.loading = false
-        })
-        .addCase(getAllUsers.pending, (state, action) => {
-          state.loading = true
-        })
-        .addCase(getAllUsers.fulfilled, (state, action) => {
-          state.users = action.payload
-          state.loading = false
-        })
-        .addCase(getOneUser.pending, (state, action) => {
-          state.loading = true
-        })
-        .addCase(getOneUser.fulfilled, (state, action) => {
-          state.oneUser = action.payload
-          state.loading = false
-        })
-}
+
+      .addCase(getUser.pending, (state, action) => {
+        state.loading = true;
+      })
+      .addCase(getUser.fulfilled, (state, action) => {
+        state.oneUser = action.payload;
+        state.loading = false;
+      })
+      .addCase(getAllUsers.pending, (state, action) => {
+        state.loading = true;
+      })
+      .addCase(getAllUsers.fulfilled, (state, action) => {
+        state.users = action.payload;
+        state.loading = false;
+      })
+      .addCase(getOneUser.pending, (state, action) => {
+        state.loading = true;
+      })
+      .addCase(getOneUser.fulfilled, (state, action) => {
+        state.oneUser = action.payload;
+        state.loading = false;
+        console.log(state.oneUser);
+      })
+      .addCase(getOneChatUser.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getOneChatUser.fulfilled, (state, action) => {
+        state.loading = false;
+        state.oneChat = action.payload;
+      })
+      .addCase(getOneChatUser.rejected, (state) => {
+        state.loading = false;
+        state.error = "error";
+      })
+      .addCase(getIsAdmin.fulfilled, (state, action) => {
+        state.loading = false;
+        state.isAdmin = action.payload;
+        console.log(state.isAdmin);
+      });
+  },
+
 });
 
+export const { clearAdmin } = usersSlice.actions;
 export default usersSlice.reducer;

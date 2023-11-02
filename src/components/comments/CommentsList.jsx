@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getComments, postComment } from "../../store/comments/commentActions";
 import { getOneUser } from "../../store/users/usersActions";
 
-
 const CommentsList = () => {
   const [show, setShow] = useState(false);
   const [com, setCom] = useState("");
@@ -39,7 +38,9 @@ const CommentsList = () => {
         userId: oneUser.id,
         likes: [],
         color: randomColor,
+
         likes: []
+
       };
       dispatch(postComment(obj));
     }
@@ -51,9 +52,11 @@ const CommentsList = () => {
     <>
       <div className="flex justify-center mb-4">
         <div className="w-1/2">
+
         {!comments? (<p>no</p>): (
             <h1 className="text-gray-700">{comments.length} -  коментариев</h1>
             )}
+
         </div>
       </div>
       <div className="flex justify-center">

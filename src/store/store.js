@@ -13,6 +13,8 @@ export default configureStore({
     users: usersReducer,
     posts: postsReducer,
     tasks: tasksReducer,
+
     comments: commentReducer
+
   },
 });

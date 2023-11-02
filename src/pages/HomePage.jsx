@@ -1,12 +1,12 @@
 import React from "react";
 import PostsList from "../components/ribbon/PostsList";
-import Burger from "../components/ui/Burger/Burger";
+import Sidebar from "../components/ui/Sidebar/Sidebar";
 import CommentsList from "../components/comments/CommentsList";
 
 const HomePage = () => {
   return (
     <div>
-      <Burger />
+      <Sidebar />
       <PostsList />
       <CommentsList />
     </div>

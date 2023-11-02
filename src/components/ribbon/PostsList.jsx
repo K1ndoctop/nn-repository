@@ -27,22 +27,9 @@ const PostsList = () => {
 
   return (
     // <div className="flex flex-col ml-80 w-1/2">
-    <div className="flex flex-col m-auto">
+    <div className="flex flex-col m-auto pt-20">
       {/* <div className="flex text-center justify-center mt-4"> */}
-      <div className="flex text-center justify-center mt-4 max-md:flex-col items-center">
-        <button
-          variant="contained"
-          className=" border-blue-500 border-[2px]  text-black w-60 h-12 rounded-xl hover:bg-blue-500 hover:text-white hover:duration-700 mr-1"
-        >
-          JS
-        </button>
-        <button
-          variant="contained"
-          className=" border-blue-500 border-[2px]  text-black w-60 h-12 rounded-xl hover:bg-blue-500 hover:text-white hover:duration-700 mr-1"
-        >
-          PY
-        </button>
-      </div>
+
       {posts.map((post) => (
         <PostsItem key={post.id} post={post} />
       ))}
