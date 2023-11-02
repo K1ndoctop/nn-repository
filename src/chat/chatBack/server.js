@@ -1,44 +1,44 @@
-const express = require("express");
-const http = require("http");
-const { Server } = require("socket.io");
-const cors = require("cors");
-const app = express();
+// const express = require("express");
+// const http = require("http");
+// const { Server } = require("socket.io");
+// const cors = require("cors");
+// const app = express();
 
-const route = require("./route");
-app.use(route);
+// const route = require("./route");
 
-app.use(cors({ origin: "*" }));
-app.use(route);
-const server = http.createServer(app);
+// app.use(cors({ origin: "*" }));
+// app.use(route);
 
-const io = new Server(server, {
-  cors: {
-    origin: "*",
-    methods: ["GET", "POST"],
-  },
-});
+// const server = http.createServer(app);
 
-io.on("connection", (socket) => {
-  socket.on("join", ({ name, room }) => {
-    socket.join(room);
+// const io = new Server(server, {
+//   cors: {
+//     origin: "*",
+//     methods: ["GET", "POST"],
+//   },
+// });
 
-    const user = addUser({ name, room }); //
+// io.on("connection", (socket) => {
+//   socket.on("join", ({ name, room }) => {
+//     socket.join(room);
 
-    socket.emit("message", {
-      data: { user: { name: "Admin" }, message: `Hey my love ${user.name}` },
-    });
-    socket.broadcast.to(user.room).emit("message", {
-      data: { user: { name: "Admin" }, message: `${user.name} has joined` },
-    });
-  });
-  io.on("disconnect", () => {
-    console.log("Disconnect");
-  });
-});
+//     const user = addUser({ name, room }); //
 
-server.listen(9999, (err) => {
-  if (err) {
-    throw Error(err);
-  }
-  console.log("Сервер запущен");
-});
+//     socket.emit("message", {
+//       data: { user: { name: "Admin" }, message: `Hey my love ${user.name}` },
+//     });
+//     socket.broadcast.to(user.room).emit("message", {
+//       data: { user: { name: "Admin" }, message: `${user.name} has joined` },
+//     });
+//   });
+//   io.on("disconnect", () => {
+//     console.log("Disconnect");
+//   });
+// });
+
+// server.listen(5000, (err) => {
+//   if (err) {
+//     throw Error(err);
+//   }
+//   console.log("Сервер запущен");
+// });

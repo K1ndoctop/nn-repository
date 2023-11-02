@@ -1,43 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers, getOneChatUser } from "../../store/users/usersActions";
-import { useLocation, useNavigate } from "react-router-dom";
-import io from "socket.io-client";
+import { Link, useNavigate } from "react-router-dom";
+import { addUserChat } from "../../store/chat/chatAction";
 
-const socket = io.connect("http://localhost:9999");
+// const FIELD = {
+//   NAME: "username",
+//   ROOM: "room",
+// };
 
 const Chat = () => {
-  const [state, setState] = useState([]);
   const { users } = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // const { NAME, ROOM } = FIELD;
+  // const [values, setValues] = useState({ [NAME]: "", [ROOM]: "" });
 
-  // const socket = io("http://localhost:9999");
+  // const handleChange = (event) => {
+  //   const { value, name } = event.target;
+  //   setValues({ ...values, [name]: value });
+  // };
 
-  const { search } = useLocation();
-  const [params, setParams] = useState(null);
+  // const handleClick = (e) => {
+  //   const isDisabled = Object.values(values).some((value) => !value);
+  //   if (isDisabled) e.preventDefault();
+  // };
 
-  useEffect(() => {
-    const searchParams = Object.fromEntries(new URLSearchParams(search));
-    setParams(searchParams);
-    socket.emit("join", searchParams);
-  }, []);
-
-  useEffect(() => {
-    socket.on("message", ({ data }) => {
-      setState((_state) => ({ ..._state, data }));
-    });
-
-    // Не забудьте отписаться от события при размонтировании компонента
-    return () => {
-      socket.off("message");
-    };
-  }, []);
-
-  useEffect(() => {
-    dispatch(getAllUsers());
-  }, []);
-  console.log(users);
   return (
     <div className="h-screen w-1/2 m-auto pt-12">
       <div className="flex justify-center">
@@ -59,6 +47,8 @@ const Chat = () => {
         >
           {users.groups}
         </button>
+        <input type="name" />
+        <input type="room" />
       </div>
       {users &&
         users.map((user) => (
@@ -66,6 +56,7 @@ const Chat = () => {
             key={user.id}
             onClick={() => {
               dispatch(getOneChatUser(user.id));
+              dispatch(addUserChat(user));
               navigate(`/chat/${user.id}`);
             }}
             className="m-4 border-blue-500 border-2 hover:bg-blue-500 hover:text-white hover:duration-700 rounded-xl p-4"

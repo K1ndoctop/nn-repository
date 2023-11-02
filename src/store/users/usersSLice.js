@@ -38,6 +38,7 @@ const usersSlice = createSlice({
       .addCase(getOneUser.fulfilled, (state, action) => {
         state.oneUser = action.payload;
         state.loading = false;
+        console.log(state.oneUser);
       })
       .addCase(getOneChatUser.pending, (state) => {
         state.loading = true;
