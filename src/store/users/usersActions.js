@@ -138,3 +138,13 @@ export const getOneChatUser = createAsyncThunk(
     return data.data;
   }
 );
+
+export const updateKPI = createAsyncThunk(
+  "users/updateKPI",
+  async ({ kpi, id }, { dispatch }) => {
+    const { data } = await axios.get(`${USERS_API}/${id}`);
+    data.KPI = kpi;
+    await axios.patch(`${USERS_API}/${id}`, data);
+    dispatch(getAllUsers());
+  }
+);

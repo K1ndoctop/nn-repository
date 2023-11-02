@@ -21,7 +21,7 @@ const ProfilePage = () => {
       <Sidebar />
       <div
         style={{ height: "100%", paddingBottom: "100px" }}
-        className="w-11/12 mx-auto"
+        className="w-11/12 mx-auto h-screen"
       >
         <div>
           <div
