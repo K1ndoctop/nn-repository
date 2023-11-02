@@ -20,7 +20,7 @@ const TasksPage = () => {
           position: "relative",
         }}
       >
-        <div style={{ display: "flex", gap: "20px" }}>
+        <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
           <TasksFilter />
           <TasksSearch />
           <TasksPagination />

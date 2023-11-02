@@ -151,9 +151,8 @@ const StudentsTasks = () => {
 
   useEffect(() => {
     dispatch(getTasks());
-  }, [dispatch]);
+  }, []);
 
-  // Используйте состояние компонента для хранения задач
   const [boards, setBoards] = useState([
     {
       id: 1,
@@ -245,4 +244,3 @@ const StudentsTasks = () => {
 };
 
 export default StudentsTasks;
-

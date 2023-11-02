@@ -10,8 +10,6 @@ const Rating = () => {
 
   const dispatch = useDispatch();
 
-  const { oneUser, loading } = useSelector((state) => state.users);
-
   const { users } = useSelector((state) => state.users);
 
   const [sortedUsers, setSortedUsers] = useState([]);
@@ -52,13 +50,13 @@ const Rating = () => {
         >
           Рейтинг
         </a>
-        <a
+        {/* <a
           onClick={() => {
             navigate("/voting");
           }}
         >
           Голосования
-        </a>
+        </a> */}
       </nav>
       <table className="rating-table">
         <thead className="rating-head">

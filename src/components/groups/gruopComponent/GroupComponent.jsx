@@ -43,11 +43,13 @@ const GroupComponent = () => {
             if (oneUser.groups === item.groups) {
               return (
                 <div
+                  onClick={() => navigate("/profile")}
                   style={{
                     width: "20%",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
+                    cursor: "pointer",
                   }}
                 >
                   <div
@@ -70,7 +72,6 @@ const GroupComponent = () => {
                   </div>
 
                   <div>
-                    {" "}
                     <p>{item.first_name}</p>
                     <p>{item.last_name}</p>
                   </div>

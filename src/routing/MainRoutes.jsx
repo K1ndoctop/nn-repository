@@ -11,7 +11,6 @@ import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
 import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
 import ResetPassword from "../components/auth/ResetPassword";
-import VotingPage from "../pages/ProfilePage/VotingPage";
 import Cart from "../components/cart/Cart";
 import ChatPage from "../pages/ChatPage";
 import ChatPeople from "../chat/chatFront/ChatPeople";
@@ -78,13 +77,9 @@ const MainRoutes = () => {
       path: "/reset",
       element: <ResetPassword />,
     },
+
     {
-      id: 15,
-      path: "/voting",
-      element: <VotingPage />,
-    },
-    {
-    id:16,
+      id: 16,
       path: "/cart",
       element: <Cart />,
     },
@@ -99,7 +94,6 @@ const MainRoutes = () => {
       element: <ChatPeople />,
     },
     {
-
       id: 19,
       path: "/group",
       element: <GroupPage />,

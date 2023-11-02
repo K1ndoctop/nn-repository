@@ -5,7 +5,12 @@
       "last_name": "Sagynaliev",
       "comment": "d2e",
       "userId": 1,
-      "likes": [],
+      "likes": [
+        {
+          "oneUserId": 4,
+          "email": "malikvundiz@gmail.com"
+        }
+      ],
       "color": "pink",
       "id": 1
     },
@@ -62,6 +67,24 @@
       "likes": [],
       "color": "red",
       "id": 7
+    },
+    {
+      "first_name": "Tilek",
+      "last_name": "Bolotov",
+      "comment": "lalala",
+      "userId": 12,
+      "likes": [],
+      "color": "blue",
+      "id": 8
+    },
+    {
+      "first_name": "Malik",
+      "last_name": "Vundiza",
+      "comment": "test 2",
+      "userId": 4,
+      "likes": [],
+      "color": "green",
+      "id": 9
     }
   ],
   "users": [
@@ -69,25 +92,22 @@
       "is_admin": true,
       "first_name": "Sulaiman",
       "last_name": "Sagynaliev",
-
       "email": "azo@gmail.com",
       "password": "2004",
       "password_confirm": "2004",
-      "groups": [
-        "JS-35"
-      ],
+      "groups": "JS-35",
       "tasks": [],
       "points": 0,
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 80,
       "image": "https://ltdfoto.ru/images/2023/11/02/suli35c3d8797a91b2ec.jpg",
       "id": 1
     },
     {
       "is_admin": true,
-      "first_name": "test",
+      "first_name": "akram",
       "last_name": "tester",
       "email": "test@gmail.com",
       "password": "123",
@@ -110,7 +130,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 70,
       "image": "",
       "id": 2
     },
@@ -147,7 +167,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 60,
       "image": "",
       "id": 3
     },
@@ -184,7 +204,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 90,
       "image": "https://ltdfoto.ru/images/2023/11/02/malik2255891b90588218.jpg",
       "id": 4
     },
@@ -213,7 +233,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 10,
       "image": "https://ltdfoto.ru/images/2023/11/02/aman829b327ed58f6179.jpg",
       "id": 5
     },
@@ -242,7 +262,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 80,
       "image": "https://ltdfoto.ru/images/2023/11/02/sabinab329611b289cdca3.jpg",
       "id": 6
     },
@@ -262,7 +282,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 40,
       "image": "https://ltdfoto.ru/images/2023/11/02/atayf6c20028eb2c0571.jpg",
       "id": 7
     },
@@ -282,7 +302,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 60,
       "image": "https://ltdfoto.ru/images/2023/11/02/argen.jpg",
       "id": 8
     },
@@ -302,7 +322,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 50,
       "image": "https://ltdfoto.ru/images/2023/11/02/footerd3e6a7da50052d74.jpg",
       "id": 9
     },
@@ -342,7 +362,7 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 90,
       "image": "https://m.media-amazon.com/images/I/61FJspbWOlL._AC_UF1000,1000_QL80_.jpg",
       "id": 11
     },
@@ -362,15 +382,35 @@
       "coins": 0,
       "payedMonths": 1,
       "chat": [],
-      "KPI": 0,
+      "KPI": 30,
       "image": "https://ltdfoto.ru/images/2023/11/02/tilek244e643bf360858c.jpg",
       "id": 12
+    },
+    {
+      "is_admin": false,
+      "first_name": "Samagan",
+      "last_name": "Jumabekov",
+      "email": "samagan@gmail.com",
+      "password": "123",
+      "password_confirm": "123",
+      "groups": "JS-35",
+      "tasks": {
+        "board_1": [],
+        "board_2": []
+      },
+      "points": 0,
+      "coins": 0,
+      "payedMonths": 1,
+      "chat": [],
+      "KPI": 7,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*",
+      "id": 13
     }
   ],
   "tasks": [
     {
       "name": "test",
-      "group": "",
+      "group": "JS-36",
       "points": "15",
       "description": "asfnkqwnfkqwnfl",
       "isDone": false,
@@ -379,24 +419,30 @@
     },
     {
       "name": "Сделать клон Трелло",
-      "group": "",
+      "group": "JS-35",
       "points": "100",
       "description": "Здесь должно быть описание",
       "isDone": false,
       "isChecked": false,
       "id": 3
+    },
+    {
+      "name": "Таск для самагана",
+      "group": "JS-35",
+      "points": "100",
+      "description": "Описание таска для самагана лалалалалалалаллалаллалалалалалал",
+      "isDone": false,
+      "isChecked": false,
+      "id": 4
     }
   ],
   "votings": [
     {
-
       "name": "",
       "week": "",
       "type": "",
       "descr": "",
       "id": 4
     }
-  ],
-  "comments": [{}]
+  ]
 }
-

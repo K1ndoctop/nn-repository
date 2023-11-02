@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./Voting.css";
 
 const Voting = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <nav>
+      <nav className="voteNav">
         <a
           onClick={() => {
             navigate("/group");
@@ -28,12 +29,6 @@ const Voting = () => {
           Голосования
         </a>
       </nav>
-
-      <button
-        onClick={() => {
-          navigate("/createVoting");
-        }}
-      ></button>
     </div>
   );
 };

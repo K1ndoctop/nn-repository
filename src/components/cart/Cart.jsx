@@ -122,55 +122,6 @@ const Cart = () => {
         </div>
       </div>
     </section>
-    // <div
-    //   style={{
-    //     width: "90%",
-    //     margin: "0 auto",
-    //     display: "flex",
-    //     flexDirection: "column",
-    //     position: "relative",
-    //     height: "150px",
-    //   }}
-    // >
-    //   <h2>Оплата за курс</h2>
-    //   <table style={{ height: "100px", textAlign: "center" }}>
-    //     <thead>
-    //       <tr>
-    //         <th>Группа</th>
-    //         <th>Стоимость одного месяца</th>
-    //         <th>Количество месяцев</th>
-    //         <th>Цена:</th>
-    //       </tr>
-    //     </thead>
-    //     <tr>
-    //       <td>{user.groups}</td>
-    //       <td>16</td>
-    //       <td>
-    //         <input
-    //           type="number"
-    //           min={0}
-    //           max={maxInputValue}
-    //           value={month}
-    //           onChange={handleMonthsChange}
-    //         />
-    //       </td>
-    //       <td>{calcPrice()}</td>
-    //     </tr>
-    //   </table>
-    //   <div style={{ position: "absolute", right: "0", bottom: "0" }}>
-    //     <button
-    //       style={{
-    //         backgroundColor: "#ffac04",
-    //         padding: "2px",
-    //         border: "1px solid black",
-    //         borderRadius: "5px",
-    //       }}
-    //       // onClick={}
-    //     >
-    //       Оплатить
-    //     </button>
-    //   </div>
-    // </div>
   );
 };
 
