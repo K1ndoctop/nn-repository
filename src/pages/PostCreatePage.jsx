@@ -1,13 +1,11 @@
 import React from "react";
-
-
 import PostCreate from "../components/ribbon/PostCreate";
-import Burger from "../components/ui/Burger/Burger";
+import Sidebar from "../components/ui/Sidebar/Sidebar";
 
 const PostCreatePage = () => {
   return (
     <div>
-      <Burger />
+      <Sidebar />
       <PostCreate />
     </div>
   );

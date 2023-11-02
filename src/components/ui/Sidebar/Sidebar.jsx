@@ -13,7 +13,7 @@ import Burger from "../Burger/Burger";
 const Sidebar = () => {
   const navigate = useNavigate();
   return (
-    <div className="text-stone-200 flex bg-black/75 justify-between items-center fixed w-full p-1">
+    <div className="text-stone-200 flex bg-black/75 justify-between items-center fixed w-full p-1 z-50">
       <img
         className="m-4"
         src="https://makers.kg/assets/logo_light-86cc27ce.svg"
@@ -79,7 +79,7 @@ const Sidebar = () => {
         </NavLink>
       </div>
       <div className="lg:hidden">
-        <Burger/>
+        <Burger />
       </div>
     </div>
   );
