@@ -6,7 +6,6 @@ import Sidebar from "../../components/ui/Sidebar/Sidebar";
 const TasksCreatePage = () => {
   return (
     <div>
-      <Sidebar />
       <TasksCreate />
     </div>
   );

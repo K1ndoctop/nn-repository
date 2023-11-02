@@ -10,9 +10,16 @@ import Sidebar from "../../components/ui/Sidebar/Sidebar";
 const TasksPage = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div style={{ height: "100%" }}>
       <Sidebar />
-      <div style={{ width: "90%", margin: "0 auto", position: "relative" }}>
+      <div
+        style={{
+          paddingTop: "100px",
+          width: "90%",
+          margin: "0 auto",
+          position: "relative",
+        }}
+      >
         <div style={{ display: "flex", gap: "20px" }}>
           <TasksFilter />
           <TasksSearch />
