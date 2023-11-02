@@ -14,9 +14,6 @@ import {
   getEmail,
   getToken,
 } from "../../helpers/functions";
-import { create } from "@mui/material/styles/createTransitions";
-import { addEmail, addToken, getToken } from "../../helpers/functions";
-import { getEmail } from "../../helpers/functions";
 
 export const registerUser = createAsyncThunk(
   "users/registerUser",
@@ -153,5 +150,13 @@ export const changePassword = createAsyncThunk(
     res.password_confirm = passwod;
     await axios.patch(`http://localhost:8000/users/${res.id}`, res);
     return res;
+  }
+);
+
+export const getOneChatUser = createAsyncThunk(
+  "users/getOneChatUser",
+  async (id) => {
+    const data = await axios.get(`${USERS_API}/${id}`);
+    return data.data;
   }
 );

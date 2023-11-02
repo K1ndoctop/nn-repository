@@ -10,7 +10,6 @@ import PostCreatePage from "../pages/PostCreatePage";
 import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
 import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
-import Basket from "../components/basket/Basket";
 import ResetPassword from "../components/auth/ResetPassword";
 import VotingPage from "../pages/ProfilePage/VotingPage";
 import Cart from "../components/cart/Cart";
@@ -72,11 +71,6 @@ const MainRoutes = () => {
       id: 12,
       path: "/profile",
       element: <ProfilePage />,
-    },
-    {
-      id: 13,
-      path: "/basket",
-      element: <Basket />,
     },
     {
       id: 14,

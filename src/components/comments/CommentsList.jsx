@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getComments, postComment } from "../../store/comments/commentActions";
 import { getOneUser } from "../../store/users/usersActions";
 
+
 const CommentsList = () => {
   const [show, setShow] = useState(false);
   const [com, setCom] = useState("");
@@ -38,13 +39,13 @@ const CommentsList = () => {
         userId: oneUser.id,
         likes: [],
         color: randomColor,
+        likes: []
       };
       dispatch(postComment(obj));
     }
     setCom("");
   }
 
-  console.log(comments);
 
   return (
     <>
