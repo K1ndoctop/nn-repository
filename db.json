@@ -79,16 +79,7 @@
       "password_confirm": "0709301103",
       "groups": "JS-35",
       "tasks": {
-        "board_1": [
-          {
-            "name": "wefeuiwfhbui",
-            "group": "JS-35",
-            "points": "23456",
-            "description": "weobewu",
-            "isDone": false,
-            "isChecked": false
-          }
-        ],
+        "board_1": [],
         "board_2": []
       },
       "points": 0,
@@ -278,6 +269,15 @@
       "isDone": false,
       "isChecked": false,
       "id": 2
+    },
+    {
+      "name": "Сделать клон Трелло",
+      "group": "",
+      "points": "100",
+      "description": "Здесь должно быть описание",
+      "isDone": false,
+      "isChecked": false,
+      "id": 3
     }
   ],
   "votings": [

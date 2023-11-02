@@ -5,13 +5,21 @@ import TasksPagination from "../../components/tasks/TasksPagination/TasksPaginat
 import TasksSearch from "../../components/tasks/TasksSearch/TasksSearch";
 import TasksFilter from "../../components/tasks/TasksFilter/TasksFilter";
 import Burger from "../../components/ui/Burger/Burger";
+import Sidebar from "../../components/ui/Sidebar/Sidebar";
 
 const TasksPage = () => {
   const navigate = useNavigate();
   return (
-    <div>
-      <Burger />
-      <div style={{ width: "90%", margin: "0 auto", position: "relative" }}>
+    <div style={{ height: "100vh" }}>
+      <Sidebar />
+      <div
+        style={{
+          paddingTop: "100px",
+          width: "90%",
+          margin: "0 auto",
+          position: "relative",
+        }}
+      >
         <div style={{ display: "flex", gap: "20px" }}>
           <TasksFilter />
           <TasksSearch />

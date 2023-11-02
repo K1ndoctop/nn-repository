@@ -17,6 +17,7 @@ import GroupPage from "../pages/GroupPage/GroupPage";
 import Rating from "../components/groups/rating/Rating";
 import Voting from "../components/groups/voting/Voting";
 import CreateVoting from "../components/groups/voting/CreateVoting/CreateVoting";
+import EditKPI from "../components/editKPI/EditKPI";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -104,6 +105,11 @@ const MainRoutes = () => {
       id: 19,
       path: "/createVoting",
       element: <CreateVoting />,
+    },
+    {
+      id: 20,
+      path: "/editKPI",
+      element: <EditKPI />,
     },
   ];
   return (
