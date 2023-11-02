@@ -6,8 +6,8 @@
 
 // const route = require("./route");
 
-app.use(cors({ origin: "*" }));
-app.use(route);
+// app.use(cors({ origin: "*" }));
+// app.use(route);
 
 // const server = http.createServer(app);
 
