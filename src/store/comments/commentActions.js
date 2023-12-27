@@ -27,7 +27,6 @@ export const addLike = createAsyncThunk(
       const { comments } = state.comments;
       const commentIndex = comments.findIndex((item) => item.id === id);
 
-      // Создаем глубокую копию комментария
       const updatedComment = _.cloneDeep(comments[commentIndex]);
 
       const newLike = {
@@ -37,17 +36,15 @@ export const addLike = createAsyncThunk(
 
       updatedComment.likes.push(newLike);
 
-      // Отправляем запрос на сервер
       await axios.patch(`http://localhost:8000/comments/${id}`, updatedComment);
 
-      // Обновляем стейт с использованием глубокой копии
       const updatedComments = [...comments];
       updatedComments[commentIndex] = updatedComment;
       dispatch(getComments());
-      // Возвращаем обновленный комментарий
+
       return updatedComment;
     } catch (error) {
-      throw error; // Можно обработать ошибку здесь
+      throw error;
     }
   }
 );
