@@ -9,6 +9,7 @@ const Voting = () => {
         onClick={() => {
           navigate("/createVoting");
         }}
+        className=" bg-emerald-300"
       >
         Новое Голосование
       </button>
