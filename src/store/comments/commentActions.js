@@ -1,7 +1,7 @@
 import { create } from "@mui/material/styles/createTransitions";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import _ from 'lodash';
+import _ from "lodash";
 
 export const getComments = createAsyncThunk(
   "comments/getComments",
@@ -19,10 +19,9 @@ export const postComment = createAsyncThunk(
   }
 );
 
-
 export const addLike = createAsyncThunk(
   "comments/addLike",
-  async ({ user, id }, { getState, dispatch}) => {
+  async ({ user, id }, { getState, dispatch }) => {
     try {
       const state = getState();
       const { comments } = state.comments;
@@ -44,7 +43,7 @@ export const addLike = createAsyncThunk(
       // Обновляем стейт с использованием глубокой копии
       const updatedComments = [...comments];
       updatedComments[commentIndex] = updatedComment;
-      dispatch(getComments())
+      dispatch(getComments());
       // Возвращаем обновленный комментарий
       return updatedComment;
     } catch (error) {
@@ -52,6 +51,3 @@ export const addLike = createAsyncThunk(
     }
   }
 );
-
-  
-  
