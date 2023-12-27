@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LoginUser } from "../../store/users/usersActions";
+import { LoginUser, getOneUser } from "../../store/users/usersActions";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -48,7 +48,7 @@ const Login = () => {
                 </h2>
 
                 <p className="mt-4 leading-relaxed ">
-                  веедите свой емайл или пароль если вы ранее регистрировались
+                  веедите свой емайл и пароль если вы ранее регистрировались
                 </p>
               </div>
 
@@ -91,7 +91,10 @@ const Login = () => {
               <div className="mt-4 col-span-6 sm:flex sm:items-center sm:gap-4">
                 <button
                   className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500"
-                  onClick={login}
+                  onClick={() => {
+                    dispatch(getOneUser());
+                    login();
+                  }}
                 >
                   войти в аккаунт
                 </button>
@@ -100,6 +103,14 @@ const Login = () => {
                   У вас еще нет аккаунта?
                   <a href="#" className="text-gray-700 underline">
                     <Link to="/">Регистрация</Link>
+
+                  </a>
+                  .
+                </p>
+                <p className="mt-4 text-sm text-gray-500 sm:mt-0">
+                  Забыли Пароль?
+                  <a href="#" className="text-gray-700 underline">
+                    <Link to="/reset">Восстановить</Link>
                   </a>
                   .
                 </p>

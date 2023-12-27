@@ -10,7 +10,15 @@ import PostCreatePage from "../pages/PostCreatePage";
 import TasksDetails from "../components/tasks/TasksDetails/TasksDetails";
 import TasksEdit from "../components/tasks/TasksEdit/TasksEdit";
 import ProfilePage from "../pages/ProfilePage/ProfilePage";
+import ResetPassword from "../components/auth/ResetPassword";
+import VotingPage from "../pages/ProfilePage/VotingPage";
 import Cart from "../components/cart/Cart";
+import ChatPage from "../pages/ChatPage";
+import ChatPeople from "../chat/chatFront/ChatPeople";
+import GroupPage from "../pages/GroupPage/GroupPage";
+import Rating from "../components/groups/rating/Rating";
+import Voting from "../components/groups/voting/Voting";
+import CreateVoting from "../components/groups/voting/CreateVoting/CreateVoting";
 
 const MainRoutes = () => {
   const ROUTES = [
@@ -65,9 +73,49 @@ const MainRoutes = () => {
       element: <ProfilePage />,
     },
     {
-      id: 13,
+      id: 14,
+      path: "/reset",
+      element: <ResetPassword />,
+    },
+    {
+      id: 15,
+      path: "/voting",
+      element: <VotingPage />,
+    },
+    {
+    id:16,
       path: "/cart",
       element: <Cart />,
+    },
+    {
+      id: 17,
+      path: "/chat",
+      element: <ChatPage />,
+    },
+    {
+      id: 18,
+      path: "/chat/:id",
+      element: <ChatPeople />,
+    },
+    {
+      id: 19,
+      path: "/groups",
+      element: <GroupPage />,
+    },
+    {
+      id: 20,
+      path: "/rating",
+      element: <Rating />,
+    },
+    {
+      id: 21,
+      path: "/voting",
+      element: <Voting />,
+    },
+    {
+      id: 22,
+      path: "/createVoting",
+      element: <CreateVoting />,
     },
   ];
   return (
